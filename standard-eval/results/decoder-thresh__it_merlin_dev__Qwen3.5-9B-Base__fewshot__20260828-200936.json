@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-200936",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "decoder-probability-thresh/outputs/it_merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-200936/data.json",
+    "threshold": 0.413,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 60.21%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7406749555950266,
+    "recall": 0.34434351775392236,
+    "f1": 0.47012401352874855,
+    "f0.5": 0.6020791221484262,
+    "tp": 417,
+    "fp": 146,
+    "fn": 794,
+    "tn": 7787
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.34434351775392236,
+      "hits": 417,
+      "support": 1211
+    }
+  }
+}

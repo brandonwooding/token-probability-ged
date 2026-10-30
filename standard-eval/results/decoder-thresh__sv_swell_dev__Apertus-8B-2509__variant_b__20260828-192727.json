@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "sv_swell_dev__Apertus-8B-2509__variant_b__20260828-192727",
+  "meta": {
+    "dataset": "sv_swell_dev",
+    "source": "decoder-probability-thresh/outputs/sv_swell_dev__Apertus-8B-2509__variant_b__20260828-192727/data.json",
+    "threshold": 0.641,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 36.03%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.3536063569682152,
+    "recall": 0.38956228956228955,
+    "f1": 0.37071451457866067,
+    "f0.5": 0.3602565699339893,
+    "tp": 1157,
+    "fp": 2115,
+    "fn": 1813,
+    "tn": 10600
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.38956228956228955,
+      "hits": 1157,
+      "support": 2970
+    }
+  }
+}

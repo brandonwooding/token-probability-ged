@@ -1,0 +1,30 @@
+{
+  "language": "english",
+  "repo": "HuggingFaceFW/fineweb",
+  "revision": "9bb295ddab0e05d785b879661af7260fed5140fc",
+  "prefix": "sample/10BT/",
+  "n_shards_total": 15,
+  "shards_sampled": [
+    "sample/10BT/000_00000.parquet",
+    "sample/10BT/001_00000.parquet",
+    "sample/10BT/002_00000.parquet",
+    "sample/10BT/003_00000.parquet",
+    "sample/10BT/004_00000.parquet",
+    "sample/10BT/005_00000.parquet",
+    "sample/10BT/006_00000.parquet",
+    "sample/10BT/007_00000.parquet",
+    "sample/10BT/008_00000.parquet",
+    "sample/10BT/009_00000.parquet",
+    "sample/10BT/010_00000.parquet",
+    "sample/10BT/011_00000.parquet",
+    "sample/10BT/012_00000.parquet",
+    "sample/10BT/013_00000.parquet",
+    "sample/10BT/014_00000.parquet"
+  ],
+  "docs_per_shard": 10000,
+  "n_docs": 150000,
+  "n_chars": 460380366,
+  "doc_weighting": "uniform (minhash_cluster_size ignored)",
+  "selection": "deterministic stride: 15 shards x strided row groups",
+  "seconds": 240.3
+}

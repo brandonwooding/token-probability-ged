@@ -1,0 +1,34 @@
+#!/bin/bash
+#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=A100
+#PBS -J 0-5
+#PBS -N a2a_predict_test
+#PBS -j oe
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+ADAPTER="${ADAPTER:?submit with ADAPTER=/absolute/path/to/a2a-run}"
+TEMPLATE="${TEMPLATE:-fewshot}"
+DATASETS=(
+  czech/cs_geccc_test_unlabelled
+  english/en_fce_test_unlabelled
+  english/en_realec_test_unlabelled
+  german/de_falko-merlin_test_unlabelled
+  italian/it_merlin_test_unlabelled
+  swedish/sv_swell_test_unlabelled
+)
+INDEX="${PBS_ARRAY_INDEX:?this file must be submitted as a PBS array job}"
+DATASET="${DATASETS[$INDEX]}"
+if [ -z "$DATASET" ]; then
+  echo "invalid PBS_ARRAY_INDEX=$INDEX" >&2
+  exit 2
+fi
+
+python "$PROJECT_ROOT/decoder-probability-thresh/llm-decoder-threshold.py" \
+  --dataset "$DATASET" --model google/gemma-4-12B \
+  --template "$TEMPLATE" --adapter "$ADAPTER"

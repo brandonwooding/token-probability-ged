@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "cs_geccc_dev__gemma-4-12B-it__20260828-053447",
+  "meta": {
+    "dataset": "czech/cs_geccc_dev",
+    "source": "GED-by-instruction/outputs/cs_geccc_dev__gemma-4-12B-it__20260828-053447/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.6457371498922746,
+    "recall": 0.2609777335489489,
+    "f1": 0.3717221828490432,
+    "f0.5": 0.49869265509864513,
+    "tp": 2098,
+    "fp": 1151,
+    "fn": 5941,
+    "tn": 22749
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.2609777335489489,
+      "hits": 2098,
+      "support": 8039
+    }
+  }
+}

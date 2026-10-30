@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "sv_swell_dev__tiny-aya-global__20260828-060254",
+  "meta": {
+    "dataset": "swedish/sv_swell_dev",
+    "source": "GED-by-instruction/outputs/sv_swell_dev__tiny-aya-global__20260828-060254/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.23260643821391486,
+    "recall": 0.07542087542087542,
+    "f1": 0.11390795830155097,
+    "f0.5": 0.16417472881852826,
+    "tp": 224,
+    "fp": 739,
+    "fn": 2746,
+    "tn": 11976
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.07542087542087542,
+      "hits": 224,
+      "support": 2970
+    }
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "0": {
+    "layer": 0,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.350580626194326,
+    "metrics": {
+      "accuracy": 0.9156351295494594,
+      "precision": 0.726027397260274,
+      "recall": 0.11425149700598802,
+      "f1": 0.19743377483443708,
+      "f0.5": 0.350580626194326
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_00.pt"
+  },
+  "1": {
+    "layer": 1,
+    "epoch": 18,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.34662172065074015,
+    "metrics": {
+      "accuracy": 0.9153523179672374,
+      "precision": 0.7145015105740181,
+      "recall": 0.1132934131736527,
+      "f1": 0.19557577010543725,
+      "f0.5": 0.34662172065074015
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_01.pt"
+  },
+  "2": {
+    "layer": 2,
+    "epoch": 2,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3754517467541159,
+    "metrics": {
+      "accuracy": 0.9156568842865535,
+      "precision": 0.6808252427184466,
+      "recall": 0.13437125748502993,
+      "f1": 0.22444488897779555,
+      "f0.5": 0.3754517467541159
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_02.pt"
+  },
+  "3": {
+    "layer": 3,
+    "epoch": 15,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4051524826599141,
+    "metrics": {
+      "accuracy": 0.9145038832205713,
+      "precision": 0.5998370008149959,
+      "recall": 0.1762874251497006,
+      "f1": 0.2724916697519437,
+      "f0.5": 0.4051524826599141
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_03.pt"
+  },
+  "4": {
+    "layer": 4,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.41397912513193386,
+    "metrics": {
+      "accuracy": 0.9162225074509974,
+      "precision": 0.6488970588235294,
+      "recall": 0.16910179640718562,
+      "f1": 0.2682880486414592,
+      "f0.5": 0.41397912513193386
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_04.pt"
+  },
+  "5": {
+    "layer": 5,
+    "epoch": 18,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4151102542474997,
+    "metrics": {
+      "accuracy": 0.9167228664041595,
+      "precision": 0.6682832201745877,
+      "recall": 0.16502994011976047,
+      "f1": 0.2646945831732616,
+      "f0.5": 0.4151102542474997
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_05.pt"
+  },
+  "6": {
+    "layer": 6,
+    "epoch": 11,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.43288197035931336,
+    "metrics": {
+      "accuracy": 0.9162007527139034,
+      "precision": 0.6241352805534205,
+      "recall": 0.19449101796407187,
+      "f1": 0.29656683710737763,
+      "f0.5": 0.43288197035931336
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_06.pt"
+  },
+  "7": {
+    "layer": 7,
+    "epoch": 1,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.43545142586676133,
+    "metrics": {
+      "accuracy": 0.9179411316814237,
+      "precision": 0.6884939195509823,
+      "recall": 0.1762874251497006,
+      "f1": 0.2807017543859649,
+      "f0.5": 0.43545142586676133
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_07.pt"
+  },
+  "8": {
+    "layer": 8,
+    "epoch": 6,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4241366863193358,
+    "metrics": {
+      "accuracy": 0.9173537537798856,
+      "precision": 0.6818181818181818,
+      "recall": 0.1688622754491018,
+      "f1": 0.2706853522749088,
+      "f0.5": 0.4241366863193358
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_08.pt"
+  },
+  "9": {
+    "layer": 9,
+    "epoch": 2,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.43068968881084774,
+    "metrics": {
+      "accuracy": 0.9145473926947593,
+      "precision": 0.5813034891375906,
+      "recall": 0.21149700598802396,
+      "f1": 0.3101510361784334,
+      "f0.5": 0.43068968881084774
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_09.pt"
+  },
+  "10": {
+    "layer": 10,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.44219253800092123,
+    "metrics": {
+      "accuracy": 0.9146126569060413,
+      "precision": 0.5748502994011976,
+      "recall": 0.22994011976047904,
+      "f1": 0.32848588537211293,
+      "f0.5": 0.44219253800092123
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_10.pt"
+  },
+  "11": {
+    "layer": 11,
+    "epoch": 6,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.44475787494123176,
+    "metrics": {
+      "accuracy": 0.9152000348075794,
+      "precision": 0.5857585139318885,
+      "recall": 0.2265868263473054,
+      "f1": 0.32677029360967186,
+      "f0.5": 0.44475787494123176
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_11.pt"
+  },
+  "12": {
+    "layer": 12,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4482758620689655,
+    "metrics": {
+      "accuracy": 0.9142645811125373,
+      "precision": 0.5642857142857143,
+      "recall": 0.24598802395209582,
+      "f1": 0.34261884904086737,
+      "f0.5": 0.4482758620689655
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_12.pt"
+  },
+  "13": {
+    "layer": 13,
+    "epoch": 4,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.44354378353693347,
+    "metrics": {
+      "accuracy": 0.9180499053668937,
+      "precision": 0.6780104712041884,
+      "recall": 0.18610778443113773,
+      "f1": 0.29205036647246757,
+      "f0.5": 0.44354378353693347
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_13.pt"
+  },
+  "14": {
+    "layer": 14,
+    "epoch": 6,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.45020195054674417,
+    "metrics": {
+      "accuracy": 0.9164400548219375,
+      "precision": 0.6117804551539491,
+      "recall": 0.21892215568862275,
+      "f1": 0.3224554595166696,
+      "f0.5": 0.45020195054674417
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_14.pt"
+  },
+  "15": {
+    "layer": 15,
+    "epoch": 4,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.43991931610796275,
+    "metrics": {
+      "accuracy": 0.9151130158592033,
+      "precision": 0.5875561257216164,
+      "recall": 0.21940119760479043,
+      "f1": 0.3194977328217649,
+      "f0.5": 0.43991931610796275
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_15.pt"
+  },
+  "16": {
+    "layer": 16,
+    "epoch": 11,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.44977794576207125,
+    "metrics": {
+      "accuracy": 0.9157439032349294,
+      "precision": 0.5942571785268415,
+      "recall": 0.2280239520958084,
+      "f1": 0.329582828457677,
+      "f0.5": 0.44977794576207125
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_16.pt"
+  },
+  "17": {
+    "layer": 17,
+    "epoch": 1,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4421736223856365,
+    "metrics": {
+      "accuracy": 0.9152217895446734,
+      "precision": 0.5883100381194409,
+      "recall": 0.22179640718562874,
+      "f1": 0.3221429813880675,
+      "f0.5": 0.4421736223856365
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_17.pt"
+  },
+  "18": {
+    "layer": 18,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4358923030727655,
+    "metrics": {
+      "accuracy": 0.9154393369156134,
+      "precision": 0.5990371389270976,
+      "recall": 0.20862275449101797,
+      "f1": 0.3094688221709007,
+      "f0.5": 0.4358923030727655
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_18.pt"
+  },
+  "19": {
+    "layer": 19,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4349486548417211,
+    "metrics": {
+      "accuracy": 0.9123936737224531,
+      "precision": 0.538906414300736,
+      "recall": 0.24550898203592814,
+      "f1": 0.33733750205693597,
+      "f0.5": 0.4349486548417211
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_19.pt"
+  },
+  "20": {
+    "layer": 20,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.43066901044359424,
+    "metrics": {
+      "accuracy": 0.9155263558639893,
+      "precision": 0.606259097525473,
+      "recall": 0.19952095808383233,
+      "f1": 0.30023427644620654,
+      "f0.5": 0.43066901044359424
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_20.pt"
+  },
+  "21": {
+    "layer": 21,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.429873417721519,
+    "metrics": {
+      "accuracy": 0.9151130158592033,
+      "precision": 0.5957894736842105,
+      "recall": 0.20335329341317365,
+      "f1": 0.3032142857142857,
+      "f0.5": 0.429873417721519
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_21.pt"
+  },
+  "22": {
+    "layer": 22,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4488370036260723,
+    "metrics": {
+      "accuracy": 0.9145473926947593,
+      "precision": 0.5692652832305104,
+      "recall": 0.24311377245508983,
+      "f1": 0.34071836186639815,
+      "f0.5": 0.4488370036260723
+    },
+    "probe_path": "secondary/linear-probes/experiments/fce_binary/probe_layer_22.pt"
+  }
+}

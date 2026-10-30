@@ -1,0 +1,363 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#   Usually these files are written by a python script from a template
+#   before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+*.lcov
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+# Pipfile.lock
+
+# UV
+#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+# uv.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+# poetry.lock
+# poetry.toml
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
+#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
+# pdm.lock
+# pdm.toml
+.pdm-python
+.pdm-build/
+
+# pixi
+#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
+# pixi.lock
+#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
+#   in the .venv directory. It is recommended not to include this directory in version control.
+.pixi/*
+!.pixi/config.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule*
+celerybeat.pid
+
+# Redis
+*.rdb
+*.aof
+*.pid
+
+# RabbitMQ
+mnesia/
+rabbitmq/
+rabbitmq-data/
+
+# ActiveMQ
+activemq-data/
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#   and can be added to the global gitignore or merged into this file.  For a more nuclear
+#   option (not recommended) you can uncomment the following to ignore the entire idea folder.
+# .idea/
+
+# Abstra
+#   Abstra is an AI-powered process automation framework.
+#   Ignore directories containing user credentials, local state, and settings.
+#   Learn more at https://abstra.io/docs
+.abstra/
+
+# Visual Studio Code
+#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
+#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
+#   you could uncomment the following to ignore the entire vscode folder
+# .vscode/
+# Temporary file for partial code execution
+tempCodeRunnerFile.py
+
+# Ruff stuff:
+.ruff_cache/
+
+# PyPI configuration file
+.pypirc
+
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Claude
+.claude/
+
+# OS cruft
+.DS_Store
+._*
+Thumbs.db
+
+# Large binary artifacts.
+# Safety net: the directory rules below are the primary defence, but these
+# extensions guarantee that tensors/arrays can never be staged from a path
+# nobody anticipated (linear-probes/features alone is ~105 GB).
+*.pt
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.safetensors
+*.bin
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.onnx
+*.joblib
+
+# Large tabular/columnar data and local databases. Text-based TSV/CSV/JSON are
+# intentionally kept trackable because this repository versions small datasets
+# and evaluation results in those formats.
+*.parquet
+*.feather
+*.arrow
+*.sqlite
+*.sqlite3
+*.db
+
+# Downloaded archives should be stored externally or recreated from their
+# documented source rather than committed to Git.
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+
+# data
+modernbert_word_features_dev
+modernbert_word_features_train
+# Anchored to their real locations. Previously bare `features` / `experiments`,
+# which matched ANY directory of that name at any depth -- a future source
+# package called features/ would have silently vanished from the repo.
+secondary/linear-probes/features/
+# experiments/ keeps its config/result JSONs; the probe weights are caught by *.pt.
+runs/
+
+# Raw per-approach model dumps (probabilities/logits), regenerable from the
+# scripts + tracked datasets. `data.json` alone missed the real filenames.
+data.json
+data_*.json
+*-data.json
+
+# generated per-dataset artifacts (deterministically rebuilt from the tracked TSV/M2)
+datasets/**/*.sentences.json
+datasets/**/*.gold.json
+
+# Fine-tuning training splits and checkpoints.
+# The ft* slices are 200k sentences x 5 languages (~175 MB of TSV) and the
+# decoder pairs are comparable -- far too large to track, and both rebuild
+# exactly from the offsets in their .provenance.json, which stays tracked.
+# The eval5k/val5k/train50k *.tsv splits are deliberately NOT covered by this:
+# the TSV view is the small benchmark view. Their heavy sibling views ARE
+# ignored, by the synthetic-data block below -- the earlier claim that these
+# splits are "small" held only for .tsv (c4200_train50k.jsonl alone is 705 MB).
+datasets/synthetic-data/*/*_ft*.tsv
+finetuning/data/*.pairs.tsv
+finetuning/models/**
+!finetuning/models/*/
+!finetuning/models/*/train_meta.json
+finetuning/decoder_ged/prepared/
+# Per-family checkpoint dirs. Globbed rather than named one by one: encoder_ged/
+# was added after decoder_ged/models/ was listed here and silently escaped every
+# rule, leaking 24 x 33 MB tokenizer.json (589 MB) that the *.safetensors/*.bin
+# extension rules do not match. This covers future families too.
+finetuning/*/models/**
+!finetuning/*/models/*/
+!finetuning/*/models/*/train_meta.json
+
+# Heavy synthetic-data views.
+# Each split is written as five synchronized views from one build (see
+# datasets/synthetic-data/README.md). The .tsv (GED benchmark view) and the
+# .manifest.json (source file, line range, mERRANT commit, spaCy version, GED
+# policy, counts) stay tracked; the three views below rebuild exactly from that
+# manifest and total ~6.1 GB. The older `*_ft*.tsv` line above caught only the
+# ft slices, so every train10k/20k/50k/100k + eval5k/val5k .jsonl/.m2/.pairs.tsv
+# was still stageable.
+datasets/synthetic-data/*/*.jsonl
+datasets/synthetic-data/*/*.m2
+datasets/synthetic-data/*/*.pairs.tsv
+# Exception: the eval5k/val5k M2s are ~1 MB each (24 MB in total, against 431 MB
+# for the training tiers) and they carry the error-type annotation behind the
+# synthetic error-composition analysis. Keeping them means that table can be
+# recomputed from a clone; the training-split M2s still cannot, and do not need
+# to be -- nothing scores against them.
+
+# Training frameworks and experiment trackers.
+checkpoints/
+lightning_logs/
+wandb/
+mlruns/
+events.out.tfevents.*
+
+# approach run outputs (raw model probs + adapted predictions), regenerable
+outputs/
+# NOTE: secondary/linear-probes/output/ (singular) is deliberately NOT ignored -- it holds
+# small per-layer metric CSVs that are results worth keeping. Beware the
+# near-collision with the outputs/ rule above when adding new write paths.
+
+# Final MultiGED TSV bundles are reproducible from raw outputs + thresholds.json.
+test-predictions/submissions/
+
+# Frozen FineWeb/FineWeb-2 document samples the frequency tables are counted
+# from (~1 GB). Redrawn exactly from the pinned revision + shard/row-group
+# stride recorded in each <language>.manifest.json, which stays tracked.
+secondary/token-frequencies/samples/*.jsonl.gz
+
+# Corpora are never committed. The learner corpora are licensed and fetched by
+# hand (see datasets/README.md); the C4200 synthetic splits are downloaded from
+# Hugging Face; MLCheck splits are rebuilt locally. Only manifests, READMEs,
+# licences and build code are tracked.
+datasets/multiged-2023/*/*.tsv
+datasets/multiged-2023/*/*.m2
+datasets/multiged-2023/*/*.orig
+datasets/write-and-improve/english/
+datasets/write-and-improve/source/
+datasets/synthetic-data/*/*.tsv
+datasets/synthetic-data/sources/
+# The Python template's bare `build/` would otherwise hide the dataset builders.
+!datasets/synthetic-data/build/
+.venv-data/

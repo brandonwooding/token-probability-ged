@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "en_realec_dev__tiny-aya-global__rep1__20260908-002103",
+  "meta": {
+    "dataset": "english/en_realec_dev",
+    "source": "GED-by-instruction/outputs/en_realec_dev__tiny-aya-global__rep1__20260908-002103/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.11740455278723785,
+    "recall": 0.0808342589164507,
+    "f1": 0.09574623593041953,
+    "f0.5": 0.10766297379927019,
+    "tp": 655,
+    "fp": 4924,
+    "fn": 7448,
+    "tn": 74981
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.0808342589164507,
+      "hits": 655,
+      "support": 8103
+    }
+  }
+}

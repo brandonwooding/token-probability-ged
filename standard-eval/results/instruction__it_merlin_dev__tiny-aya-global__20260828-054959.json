@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "it_merlin_dev__tiny-aya-global__20260828-054959",
+  "meta": {
+    "dataset": "italian/it_merlin_dev",
+    "source": "GED-by-instruction/outputs/it_merlin_dev__tiny-aya-global__20260828-054959/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.14535666218034993,
+    "recall": 0.08918249380677126,
+    "f1": 0.11054247697031729,
+    "f0.5": 0.12909395170929955,
+    "tp": 108,
+    "fp": 635,
+    "fn": 1103,
+    "tn": 7298
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.08918249380677126,
+      "hits": 108,
+      "support": 1211
+    }
+  }
+}

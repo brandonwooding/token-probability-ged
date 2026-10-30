@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__Qwen3.5-9B-Base__en-de-es-ro-ru__ft200k__100000__20260813-012027__variant_b__20260815-171142",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "decoder-probability-thresh/outputs/en_realec_dev__Qwen3.5-9B-Base__en-de-es-ro-ru__ft200k__100000__20260813-012027__variant_b__20260815-171142/data.json",
+    "threshold": 0.288,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 49.93%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.6046157747907684,
+    "recall": 0.2942120202394175,
+    "f1": 0.3958160385190104,
+    "f0.5": 0.4992670157068063,
+    "tp": 2384,
+    "fp": 1559,
+    "fn": 5719,
+    "tn": 78346
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.2942120202394175,
+      "hits": 2384,
+      "support": 8103
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "language": "german",
+  "repo": "HuggingFaceFW/fineweb-2",
+  "revision": "af9c13333eb981300149d5ca60a8e9d659b276b9",
+  "prefix": "data/deu_Latn/train/",
+  "n_shards_total": 181,
+  "shards_sampled": [
+    "data/deu_Latn/train/000_00000.parquet",
+    "data/deu_Latn/train/000_00011.parquet",
+    "data/deu_Latn/train/000_00022.parquet",
+    "data/deu_Latn/train/000_00033.parquet",
+    "data/deu_Latn/train/001_00006.parquet",
+    "data/deu_Latn/train/001_00017.parquet",
+    "data/deu_Latn/train/001_00028.parquet",
+    "data/deu_Latn/train/002_00001.parquet",
+    "data/deu_Latn/train/002_00012.parquet",
+    "data/deu_Latn/train/002_00023.parquet",
+    "data/deu_Latn/train/002_00035.parquet",
+    "data/deu_Latn/train/003_00007.parquet",
+    "data/deu_Latn/train/003_00018.parquet",
+    "data/deu_Latn/train/003_00030.parquet",
+    "data/deu_Latn/train/004_00002.parquet",
+    "data/deu_Latn/train/004_00013.parquet"
+  ],
+  "docs_per_shard": 9375,
+  "n_docs": 150000,
+  "n_chars": 497793984,
+  "doc_weighting": "uniform (minhash_cluster_size ignored)",
+  "selection": "deterministic stride: 16 shards x strided row groups",
+  "seconds": 360.1
+}

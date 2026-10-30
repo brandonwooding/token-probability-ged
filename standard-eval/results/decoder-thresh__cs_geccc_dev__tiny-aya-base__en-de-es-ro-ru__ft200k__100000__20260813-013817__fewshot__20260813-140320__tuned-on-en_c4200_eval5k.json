@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "cs_geccc_dev__tiny-aya-base__en-de-es-ro-ru__ft200k__100000__20260813-013817__fewshot__20260813-140320__tuned-on-en_c4200_eval5k",
+  "meta": {
+    "dataset": "cs_geccc_dev",
+    "source": "decoder-probability-thresh/outputs/cs_geccc_dev__tiny-aya-base__en-de-es-ro-ru__ft200k__100000__20260813-013817__fewshot__20260813-140320/data.json",
+    "threshold": 0.989,
+    "threshold_selection": "auto (max incorrect-class F0.5 = 19.90% on en_c4200_eval5k, held out from this scoring set)",
+    "tuned_on": "en_c4200_eval5k",
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.2856347232020198,
+    "recall": 0.9569598208732429,
+    "f1": 0.4399519615692554,
+    "f0.5": 0.3322507363674841,
+    "tp": 7693,
+    "fp": 19240,
+    "fn": 346,
+    "tn": 4660
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.9569598208732429,
+      "hits": 7693,
+      "support": 8039
+    }
+  }
+}

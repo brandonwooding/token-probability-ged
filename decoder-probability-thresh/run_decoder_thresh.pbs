@@ -1,0 +1,50 @@
+#!/bin/bash
+# Four templates run sequentially in one job, each reloading the model. On the
+# 5,000-sentence synthetic sets that is ~95 min total (measured: 9 min per
+# template on FCE-dev's 2,191), so 2h left no margin. Both defaults below are
+# sized for ONE dataset on a model that fits 24 GB -- override -l select and
+# -l walltime at qsub for a multi-dataset sweep or a larger model (gemma-4-12B
+# is 23 GB and needs A100). Each (dataset, template) writes its own run folder
+# as it finishes, so an overrun costs only the in-flight one.
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_type=RTX6000
+#PBS -N run_decoder_thresh
+#PBS -j oe
+mkdir -p ~/logs
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+MODEL="${MODEL:-google/gemma-4-12B}"
+# Space-separated list of dataset ids, each '<language>/<stem>' or a bare stem
+# (see paths.py). More than one matters for the threshold approaches: scoring a
+# run with --tune-on needs a run of the *same system* over the tuning dataset,
+# so the pair is most easily produced by one job.
+DATASET="${DATASET:-english/en_fce_dev}"
+# Space-separated list of prompt templates (see prompts.py). Override with e.g.
+#   qsub -v DATASET=...,TEMPLATES="none fewshot" run_decoder_thresh.pbs
+TEMPLATES="${TEMPLATES:-none variant_a variant_b fewshot}"
+# Optional LoRA adapter directory from finetuning/train_decoder.py. When set,
+# the run is named after the adapter rather than the base model, which is what
+# stops standard-eval pairing a fine-tuned run with a base-model threshold.
+# Only templates the adapter was trained in are meaningful here (variant_b).
+ADAPTER="${ADAPTER:-}"
+
+SCRIPT_DIR="$PROJECT_ROOT/decoder-probability-thresh"
+
+# Scoring is no longer done here: standard-eval/run.py discovers every run under
+# outputs/ and scores them all against the shared gold (the old evaluate-probs.py
+# is legacy, paragraph-level).
+for DS in $DATASET; do
+    for TPL in $TEMPLATES; do
+        python "$SCRIPT_DIR/llm-decoder-threshold.py" \
+            --dataset "$DS" --model "$MODEL" --template "$TPL" \
+            ${ADAPTER:+--adapter "$ADAPTER"}
+    done
+done

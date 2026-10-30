@@ -1,0 +1,38 @@
+#!/bin/bash
+#PBS -l walltime=72:00:00
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=RTX6000
+#PBS -N encoder_ged_E
+#PBS -j oe
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+VARIANT="${VARIANT:?submit with VARIANT=e0|e1a|e1b|e2a|e2b|e3}"
+MODEL="${MODEL:-jhu-clsp/mmBERT-base}"
+CORPUS="${CORPUS:-c4200}"
+# `qsub -v` splits its argument on commas, so LANGS=en,de,it,sv arrives as
+# LANGS=en plus three stray names -- and because LANGS is then set, the default
+# never fires. Join with '+' instead; it is normalised here. Check the run
+# directory name records the languages you asked for before letting it train.
+LANGS="${LANGS:-en,de,es,ro,ru}"
+LANGS="${LANGS//+/,}"
+NAME="${NAME:-train20k}"
+VAL_NAME="${VAL_NAME:-val5k}"
+MAX_PER_LANG="${MAX_PER_LANG:-all}"
+MAX_VAL_PER_LANG="${MAX_VAL_PER_LANG:-200}"
+TOKEN_BUDGET="${TOKEN_BUDGET:-16384}"
+GRAD_ACCUM="${GRAD_ACCUM:-6}"
+LR="${LR:-1e-5}"
+EXTRA="${EXTRA:-}"
+MAX_ARG=()
+if [[ "$MAX_PER_LANG" != "all" ]]; then MAX_ARG=(--max-per-lang "$MAX_PER_LANG"); fi
+
+echo "variant=$VARIANT model=$MODEL corpus=$CORPUS langs=$LANGS split=$NAME val=$VAL_NAME"
+python "$PROJECT_ROOT/finetuning/encoder_ged/train_objectives.py" \
+  --variant "$VARIANT" --model "$MODEL" --langs "$LANGS" --corpus "$CORPUS" \
+  --name "$NAME" --val-name "$VAL_NAME" "${MAX_ARG[@]}" \
+  --max-val-per-lang "$MAX_VAL_PER_LANG" \
+  --token-budget "$TOKEN_BUDGET" --grad-accum "$GRAD_ACCUM" --lr "$LR" $EXTRA

@@ -1,0 +1,64 @@
+{
+  "kind": "ft-encoder",
+  "base_model": "FacebookAI/xlm-roberta-base",
+  "model_id": "xlm-roberta-base",
+  "run_name": "xlm-roberta-base__en-de-it-sv__mlcheck__train20k__all__20260908-225400",
+  "languages": [
+    "en",
+    "de",
+    "it",
+    "sv"
+  ],
+  "corpus": "mlcheck",
+  "train_split": "train20k",
+  "val_split": "val5k",
+  "max_per_lang": null,
+  "n_train": 80000,
+  "n_val": 4000,
+  "epochs": 1,
+  "batch_size": 32,
+  "lr": 3e-05,
+  "max_length": 192,
+  "seed": 0,
+  "total_steps": 2500,
+  "best_step": 2500,
+  "best_val_f0.5": 0.5807040263715564,
+  "history": [
+    {
+      "step": 500,
+      "val_loss": 0.2620039941072464,
+      "precision": 0.7629724535554132,
+      "recall": 0.1671813587871982,
+      "f0.5": 0.4454667863554757
+    },
+    {
+      "step": 1000,
+      "val_loss": 0.2435599136352539,
+      "precision": 0.7934204160619255,
+      "recall": 0.23020774845592365,
+      "f0.5": 0.5327442827442828
+    },
+    {
+      "step": 1500,
+      "val_loss": 0.23942719101905824,
+      "precision": 0.7641248518372185,
+      "recall": 0.27147669848399775,
+      "f0.5": 0.5606447124304267
+    },
+    {
+      "step": 2000,
+      "val_loss": 0.23342505288124085,
+      "precision": 0.8057644110275689,
+      "recall": 0.27077484559236387,
+      "f0.5": 0.5775449101796408
+    },
+    {
+      "step": 2500,
+      "val_loss": 0.2358674385547638,
+      "precision": 0.800081103000811,
+      "recall": 0.2769511510387423,
+      "f0.5": 0.5807040263715564
+    }
+  ],
+  "timestamp": "20260908-225400"
+}

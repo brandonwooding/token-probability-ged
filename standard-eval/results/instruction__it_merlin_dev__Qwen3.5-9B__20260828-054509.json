@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "it_merlin_dev__Qwen3.5-9B__20260828-054509",
+  "meta": {
+    "dataset": "italian/it_merlin_dev",
+    "source": "GED-by-instruction/outputs/it_merlin_dev__Qwen3.5-9B__20260828-054509/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.6952380952380952,
+    "recall": 0.12056151940545004,
+    "f1": 0.2054890921885996,
+    "f0.5": 0.355923939541687,
+    "tp": 146,
+    "fp": 64,
+    "fn": 1065,
+    "tn": 7869
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.12056151940545004,
+      "hits": 146,
+      "support": 1211
+    }
+  }
+}

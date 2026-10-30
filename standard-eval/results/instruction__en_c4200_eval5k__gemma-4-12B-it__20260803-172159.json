@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "en_c4200_eval5k__gemma-4-12B-it__20260803-172159",
+  "meta": {
+    "dataset": "english/en_c4200_eval5k",
+    "source": "GED-by-instruction/outputs/en_c4200_eval5k__gemma-4-12B-it__20260803-172159/data.json",
+    "parse_failures_as_all_c": 916
+  },
+  "global": {
+    "precision": 0.6635029106555302,
+    "recall": 0.17885651906938665,
+    "f1": 0.2817605331040413,
+    "f0.5": 0.4303043235612751,
+    "tp": 5243,
+    "fp": 2659,
+    "fn": 24071,
+    "tn": 95006
+  },
+  "coverage": {
+    "scored_units": 5000,
+    "total_units": 5000,
+    "scored_tokens": 126979,
+    "total_tokens": 126979,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.17885651906938665,
+      "hits": 5243,
+      "support": 29314
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "sv_swell_dev__tiny-aya-base__none__20260828-173321__tuned-on-en_c4200_eval5k",
+  "meta": {
+    "dataset": "sv_swell_dev",
+    "source": "decoder-probability-thresh/outputs/sv_swell_dev__tiny-aya-base__none__20260828-173321/data.json",
+    "threshold": 0.0001,
+    "threshold_selection": "auto (max incorrect-class F0.5 = 36.38% on en_c4200_eval5k, held out from this scoring set)",
+    "tuned_on": "en_c4200_eval5k",
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.40710382513661203,
+    "recall": 0.25084175084175087,
+    "f1": 0.3104166666666667,
+    "f0.5": 0.3620019436345967,
+    "tp": 745,
+    "fp": 1085,
+    "fn": 2225,
+    "tn": 11630
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.25084175084175087,
+      "hits": 745,
+      "support": 2970
+    }
+  }
+}

@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=1:mem=4gb
+#PBS -N c4_merrant
+#PBS -j oe
+set -euo pipefail
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+source /etc/profile.d/modules.sh
+module load SciPy-bundle/2024.05-gfbf-2024a
+export PYTHONNOUSERSITE=1
+PYTHON="${PY:-$PROJECT_ROOT/.venv-data/bin/python}"
+LANGS="${LANGS:-en}"
+CORPUS="${CORPUS:-c4200}"
+DATA_ROOT="${DATA_ROOT:-$PROJECT_ROOT/datasets/synthetic-data}"
+FORCE="${FORCE:-0}"
+FORCE_ARG=()
+if [[ "$FORCE" == "1" ]]; then FORCE_ARG=(--force); fi
+"$PYTHON" datasets/synthetic-data/build/merrant/build.py \
+  --langs "$LANGS" --corpus "$CORPUS" --data-root "$DATA_ROOT" "${FORCE_ARG[@]}"

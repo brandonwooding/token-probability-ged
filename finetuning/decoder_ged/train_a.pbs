@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -l walltime=60:00:00
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=A100
+#PBS -N decoder_ged_A
+#PBS -j oe
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+VARIANT="${VARIANT:?submit with VARIANT=a0|a1a|a1b|a1-anchor|a2a|a2b|a3a|a3b}"
+MODEL="${MODEL:-google/gemma-4-12B}"
+CORPUS="${CORPUS:-c4200}"
+# `qsub -v` splits its argument on commas, so LANGS=en,de,it,sv arrives as
+# LANGS=en and three stray names. Submit multi-language sets with '+'
+# (LANGS=en+de+it+sv); it is normalised to commas here. A comma list still
+# works when it survives quoting, and the single-language case is unaffected.
+LANGS="${LANGS:-en,de,es,ro,ru}"
+LANGS="${LANGS//+/,}"
+NAME="${NAME:-train10k}"
+VAL_NAME="${VAL_NAME:-val5k}"
+MAX_PER_LANG="${MAX_PER_LANG:-all}"
+MAX_VAL_PER_LANG="${MAX_VAL_PER_LANG:-200}"
+EXTRA="${EXTRA:-}"
+MAX_ARG=()
+if [[ "$MAX_PER_LANG" != "all" ]]; then MAX_ARG=(--max-per-lang "$MAX_PER_LANG"); fi
+echo "variant=$VARIANT corpus=$CORPUS langs=$LANGS split=$NAME val=$VAL_NAME model=$MODEL"
+python "$PROJECT_ROOT/finetuning/decoder_ged/train_objectives.py" \
+  --variant "$VARIANT" --model "$MODEL" --langs "$LANGS" --name "$NAME" \
+  --corpus "$CORPUS" \
+  --val-name "$VAL_NAME" "${MAX_ARG[@]}" \
+  --max-val-per-lang "$MAX_VAL_PER_LANG" $EXTRA

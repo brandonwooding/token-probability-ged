@@ -1,0 +1,1064 @@
+{
+  "version": 1,
+  "selection": "maximum incorrect-class F0.5 on the matching labelled development corpus",
+  "systems": {
+    "a2a": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.264,
+          "dev_metrics": {
+            "precision": 0.6888730130380425,
+            "recall": 0.47978604304017913,
+            "f1": 0.56562545827834,
+            "f0.5": 0.6336454739609004,
+            "tp": 3857,
+            "fp": 1742,
+            "fn": 4182
+          },
+          "source_data": "decoder-probability-thresh/outputs/cs_geccc_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-113650/data.json",
+          "source_result": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.12,
+          "dev_metrics": {
+            "precision": 0.6477272727272727,
+            "recall": 0.3953757225433526,
+            "f1": 0.4910265613783202,
+            "f0.5": 0.5744037621766878,
+            "tp": 1368,
+            "fp": 744,
+            "fn": 2092
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_fce_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-102418/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_fce_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-102418.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.05,
+          "dev_metrics": {
+            "precision": 0.6139917695473252,
+            "recall": 0.2761940022213995,
+            "f1": 0.3810010214504596,
+            "f0.5": 0.49332098928713136,
+            "tp": 2238,
+            "fp": 1407,
+            "fn": 5865
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_realec_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-105019/data.json",
+          "source_result": null
+        },
+        "english/en_wi2024_test_unlabelled": {
+          "dev_dataset": "english/en_wi2024_dev",
+          "threshold": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.093,
+          "dev_metrics": {
+            "precision": 0.775031847133758,
+            "recall": 0.5017318159327065,
+            "f1": 0.6091309571485782,
+            "f0.5": 0.6988926159077333,
+            "tp": 3042,
+            "fp": 883,
+            "fn": 3021
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-111411/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-111411.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.147,
+          "dev_metrics": {
+            "precision": 0.802610114192496,
+            "recall": 0.40627580511973577,
+            "f1": 0.5394736842105263,
+            "f0.5": 0.6715806715806716,
+            "tp": 492,
+            "fp": 121,
+            "fn": 719
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-115202/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-115202.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.286,
+          "dev_metrics": {
+            "precision": 0.7492925863044708,
+            "recall": 0.4457912457912458,
+            "f1": 0.5590035887692631,
+            "f0.5": 0.6594939230922495,
+            "tp": 1324,
+            "fp": 443,
+            "fn": 1646
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__a2a-skip__20260818-230257__fewshot__20260821-120828/data.json",
+          "source_result": null
+        }
+      }
+    },
+    "d1": {
+      "approach": "decoder-ged-head",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__ft200k__10000__d1__20260820-151939",
+      "tag": null,
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": null
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": null
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": null
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": null
+        }
+      }
+    },
+    "d2": {
+      "approach": "decoder-ged-head",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__ft200k__10000__d2__20260820-172804",
+      "tag": null,
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": null
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": null
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": null
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": null
+        }
+      }
+    },
+    "a2a20k": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.331,
+          "dev_metrics": {
+            "precision": 0.8273092369477911,
+            "recall": 0.5125015549197661,
+            "f1": 0.6329211152930332,
+            "f0.5": 0.736793161414929,
+            "tp": 4120,
+            "fp": 860,
+            "fn": 3919
+          },
+          "source_data": "decoder-probability-thresh/outputs/cs_geccc_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-120219/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__cs_geccc_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-120219.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.163,
+          "dev_metrics": {
+            "precision": 0.7546245919477693,
+            "recall": 0.4008670520231214,
+            "f1": 0.5235938089845225,
+            "f0.5": 0.6414169441361449,
+            "tp": 1387,
+            "fp": 451,
+            "fn": 2073
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_fce_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-121924/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_fce_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-121924.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.091,
+          "dev_metrics": {
+            "precision": 0.6392991239048811,
+            "recall": 0.31519190423300014,
+            "f1": 0.4222185485204166,
+            "f0.5": 0.5302495536270398,
+            "tp": 2554,
+            "fp": 1441,
+            "fn": 5549
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_realec_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-124258/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_realec_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-124258.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.159,
+          "dev_metrics": {
+            "precision": 0.8564291348935051,
+            "recall": 0.537192808840508,
+            "f1": 0.6602473140077033,
+            "f0.5": 0.7654524089306698,
+            "tp": 3257,
+            "fp": 546,
+            "fn": 2806
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-130045/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-130045.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.175,
+          "dev_metrics": {
+            "precision": 0.856140350877193,
+            "recall": 0.402972749793559,
+            "f1": 0.5480067377877597,
+            "f0.5": 0.6989401317674019,
+            "tp": 488,
+            "fp": 82,
+            "fn": 723
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-131202/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-131202.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.34,
+          "dev_metrics": {
+            "precision": 0.7947923124612524,
+            "recall": 0.4316498316498317,
+            "f1": 0.5594588697359808,
+            "f0.5": 0.6803226491190831,
+            "tp": 1282,
+            "fp": 331,
+            "fn": 1688
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-132400/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260831-132400.json"
+        }
+      }
+    },
+    "d2_20k": {
+      "approach": "decoder-ged-head",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907",
+      "tag": null,
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.721,
+          "dev_metrics": {
+            "precision": 0.7532275132275132,
+            "recall": 0.44271675581539993,
+            "f1": 0.5576621748668129,
+            "f0.5": 0.6605664649764282,
+            "tp": 3559,
+            "fp": 1166,
+            "fn": 4480
+          },
+          "source_data": "finetuning/decoder_ged/outputs/cs_geccc_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-015337/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__cs_geccc_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-015337.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.39,
+          "dev_metrics": {
+            "precision": 0.7220412595005429,
+            "recall": 0.38439306358381503,
+            "f1": 0.5016974726518295,
+            "f0.5": 0.6141485038788326,
+            "tp": 1330,
+            "fp": 512,
+            "fn": 2130
+          },
+          "source_data": "finetuning/decoder_ged/outputs/en_fce_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-015713/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__en_fce_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-015713.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.293,
+          "dev_metrics": {
+            "precision": 0.6086646036657939,
+            "recall": 0.3155621374799457,
+            "f1": 0.41563719115734715,
+            "f0.5": 0.5133095113823424,
+            "tp": 2557,
+            "fp": 1644,
+            "fn": 5546
+          },
+          "source_data": "finetuning/decoder_ged/outputs/en_realec_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020356/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__en_realec_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020356.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.512,
+          "dev_metrics": {
+            "precision": 0.8141858141858141,
+            "recall": 0.5376876133927099,
+            "f1": 0.6476606734876328,
+            "f0.5": 0.7382580732823045,
+            "tp": 3260,
+            "fp": 744,
+            "fn": 2803
+          },
+          "source_data": "finetuning/decoder_ged/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020803/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020803.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.635,
+          "dev_metrics": {
+            "precision": 0.7304860088365243,
+            "recall": 0.40957886044591246,
+            "f1": 0.5248677248677248,
+            "f0.5": 0.6315253374076903,
+            "tp": 496,
+            "fp": 183,
+            "fn": 715
+          },
+          "source_data": "finetuning/decoder_ged/outputs/it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020918/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020918.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.765,
+          "dev_metrics": {
+            "precision": 0.7587719298245614,
+            "recall": 0.465993265993266,
+            "f1": 0.5773884021693785,
+            "f0.5": 0.6740697447886227,
+            "tp": 1384,
+            "fp": 440,
+            "fn": 1586
+          },
+          "source_data": "finetuning/decoder_ged/outputs/sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-021048/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-021048.json"
+        }
+      }
+    },
+    "gemma-mlcheck-a2a-multiged": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.105,
+          "dev_metrics": {
+            "precision": 0.8537541658498333,
+            "recall": 0.5417340465231995,
+            "f1": 0.662861491628615,
+            "f0.5": 0.7655662201596176,
+            "tp": 4355,
+            "fp": 746,
+            "fn": 3684
+          },
+          "source_data": "decoder-probability-thresh/outputs/cs_geccc_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-014026/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__cs_geccc_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-014026.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.072,
+          "dev_metrics": {
+            "precision": 0.7712796757382745,
+            "recall": 0.38497109826589593,
+            "f1": 0.5135916714864083,
+            "f0.5": 0.6423611111111112,
+            "tp": 1332,
+            "fp": 395,
+            "fn": 2128
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_fce_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-015743/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_fce_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-015743.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.033,
+          "dev_metrics": {
+            "precision": 0.6671624033313504,
+            "recall": 0.2768110576329754,
+            "f1": 0.3912778020061055,
+            "f0.5": 0.5203934852211034,
+            "tp": 2243,
+            "fp": 1119,
+            "fn": 5860
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-021731/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-021731.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.063,
+          "dev_metrics": {
+            "precision": 0.875124131082423,
+            "recall": 0.5813953488372093,
+            "f1": 0.6986423545733823,
+            "f0.5": 0.7948139797068772,
+            "tp": 3525,
+            "fp": 503,
+            "fn": 2538
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-023921/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__de_falko-merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-023921.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.06,
+          "dev_metrics": {
+            "precision": 0.8328611898016998,
+            "recall": 0.48554913294797686,
+            "f1": 0.6134585289514867,
+            "f0.5": 0.7286245353159851,
+            "tp": 588,
+            "fp": 118,
+            "fn": 623
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-025409/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-025409.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.15,
+          "dev_metrics": {
+            "precision": 0.7930666666666667,
+            "recall": 0.5006734006734007,
+            "f1": 0.6138286893704851,
+            "f0.5": 0.710124164278892,
+            "tp": 1487,
+            "fp": 388,
+            "fn": 1483
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_swell_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-030617/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__sv_swell_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-030617.json"
+        }
+      }
+    },
+    "gemma-mlcheck-d2-multiged": {
+      "approach": "decoder-ged-head",
+      "checkpoint": "gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901",
+      "tag": null,
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.533,
+          "dev_metrics": {
+            "precision": 0.7937675070028011,
+            "recall": 0.5640004975743251,
+            "f1": 0.6594429496036651,
+            "f0.5": 0.7339657461067762,
+            "tp": 4534,
+            "fp": 1178,
+            "fn": 3505
+          },
+          "source_data": "finetuning/decoder_ged/outputs/cs_geccc_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-014820/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__cs_geccc_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-014820.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.357,
+          "dev_metrics": {
+            "precision": 0.7602179836512262,
+            "recall": 0.4031791907514451,
+            "f1": 0.5269121813031162,
+            "f0.5": 0.6458333333333334,
+            "tp": 1395,
+            "fp": 440,
+            "fn": 2065
+          },
+          "source_data": "finetuning/decoder_ged/outputs/en_fce_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-015154/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__en_fce_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-015154.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.122,
+          "dev_metrics": {
+            "precision": 0.7288378766140603,
+            "recall": 0.25077131926446994,
+            "f1": 0.37315214397208707,
+            "f0.5": 0.5276551545053233,
+            "tp": 2032,
+            "fp": 756,
+            "fn": 6071
+          },
+          "source_data": "finetuning/decoder_ged/outputs/en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-015832/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-015832.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.189,
+          "dev_metrics": {
+            "precision": 0.8736277763594588,
+            "recall": 0.5644070592116114,
+            "f1": 0.6857715430861723,
+            "f0.5": 0.7873544705719938,
+            "tp": 3422,
+            "fp": 495,
+            "fn": 2641
+          },
+          "source_data": "finetuning/decoder_ged/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020237/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__de_falko-merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020237.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.175,
+          "dev_metrics": {
+            "precision": 0.7809388335704125,
+            "recall": 0.45334434351775393,
+            "f1": 0.5736677115987461,
+            "f0.5": 0.6823266219239374,
+            "tp": 549,
+            "fp": 154,
+            "fn": 662
+          },
+          "source_data": "finetuning/decoder_ged/outputs/it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020351/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020351.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.394,
+          "dev_metrics": {
+            "precision": 0.799786438868126,
+            "recall": 0.5043771043771044,
+            "f1": 0.6186248193268634,
+            "f0.5": 0.7159242974574651,
+            "tp": 1498,
+            "fp": 375,
+            "fn": 1472
+          },
+          "source_data": "finetuning/decoder_ged/outputs/sv_swell_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020520/data.json",
+          "source_result": "standard-eval/results/decoder-ged-head__sv_swell_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__d2__20260905-113901__20260907-020520.json"
+        }
+      }
+    },
+    "gemma-C4200-a2a20k-wi": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946",
+      "tag": "fewshot",
+      "datasets": {
+        "english/en_wi2024_test_unlabelled": {
+          "dev_dataset": "english/en_wi2024_dev",
+          "threshold": 0.131,
+          "dev_metrics": {
+            "precision": 0.7434569247546347,
+            "recall": 0.3876883707705431,
+            "f1": 0.5096243692767707,
+            "f0.5": 0.6281673270063576,
+            "tp": 2727,
+            "fp": 941,
+            "fn": 4307
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_wi2024_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260907-124113/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_wi2024_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946__fewshot__20260907-124113.json"
+        }
+      }
+    },
+    "mlcheck-a2a-thr-mlcheck-en": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        }
+      }
+    },
+    "mlcheck-a2a-thr-c4200-en": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "english/en_c4200_eval5k",
+          "threshold": 0.26,
+          "dev_metrics": {
+            "precision": 0.7717862301396244,
+            "recall": 0.44326666052170705,
+            "f1": 0.5631147540983606,
+            "f0.5": 0.6721549772174545,
+            "tp": 9618,
+            "fp": 2844,
+            "fn": 12080
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175718/data.json",
+          "source_result": null
+        }
+      }
+    },
+    "mlcheck-a2a-thr-perlang-mlcheck": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_mlcheck_eval5k",
+          "threshold": 0.065,
+          "dev_metrics": {
+            "precision": 0.8209104552276139,
+            "recall": 0.4065906838453915,
+            "f1": 0.543827671913836,
+            "f0.5": 0.6819315159574467,
+            "tp": 1641,
+            "fp": 358,
+            "fn": 2395
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173932/data.json",
+          "source_result": null
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_mlcheck_eval5k",
+          "threshold": 0.056,
+          "dev_metrics": {
+            "precision": 0.9239860950173813,
+            "recall": 0.6043656207366985,
+            "f1": 0.7307551319648095,
+            "f0.5": 0.8356038060108145,
+            "tp": 3987,
+            "fp": 328,
+            "fn": 2610
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-173937/data.json",
+          "source_result": null
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_mlcheck_eval5k",
+          "threshold": 0.105,
+          "dev_metrics": {
+            "precision": 0.8631159780985564,
+            "recall": 0.44826471918826344,
+            "f1": 0.5900718873622868,
+            "f0.5": 0.7283113173866477,
+            "tp": 6936,
+            "fp": 1100,
+            "fn": 8537
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-175727/data.json",
+          "source_result": null
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_mlcheck_eval5k",
+          "threshold": 0.1,
+          "dev_metrics": {
+            "precision": 0.8333939614405238,
+            "recall": 0.43242733106832765,
+            "f1": 0.5694047471107245,
+            "f0.5": 0.7030195163864,
+            "tp": 4582,
+            "fp": 916,
+            "fn": 6014
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_mlcheck_eval5k__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20261008-181456/data.json",
+          "source_result": null
+        }
+      }
+    },
+    "gemma-base-fewshot": {
+      "approach": "decoder-thresh",
+      "checkpoint": "gemma-4-12B",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.426,
+          "dev_metrics": {
+            "precision": 0.6500539762504498,
+            "recall": 0.449434009205125,
+            "f1": 0.5314407589909539,
+            "f0.5": 0.5967757920121569,
+            "tp": 3613,
+            "fp": 1945,
+            "fn": 4426
+          },
+          "source_data": "decoder-probability-thresh/outputs/cs_geccc_dev__gemma-4-12B__fewshot__20260828-161929/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__cs_geccc_dev__gemma-4-12B__fewshot__20260828-161929.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.207,
+          "dev_metrics": {
+            "precision": 0.6042813455657492,
+            "recall": 0.2855491329479769,
+            "f1": 0.38783120706575075,
+            "f0.5": 0.494,
+            "tp": 988,
+            "fp": 647,
+            "fn": 2472
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_fce_dev__gemma-4-12B__fewshot__20260828-164421/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_fce_dev__gemma-4-12B__fewshot__20260828-164421.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.218,
+          "dev_metrics": {
+            "precision": 0.5696733593047647,
+            "recall": 0.2346044674811798,
+            "f1": 0.33234265734265733,
+            "f0.5": 0.44310288564635675,
+            "tp": 1901,
+            "fp": 1436,
+            "fn": 6202
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_realec_dev__gemma-4-12B__fewshot__20260828-171821/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_realec_dev__gemma-4-12B__fewshot__20260828-171821.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.16,
+          "dev_metrics": {
+            "precision": 0.669609079445145,
+            "recall": 0.3503216229589312,
+            "f1": 0.45998917162966974,
+            "f0.5": 0.5663697936110075,
+            "tp": 2124,
+            "fp": 1048,
+            "fn": 3939
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_falko-merlin_dev__gemma-4-12B__fewshot__20260828-174439/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__de_falko-merlin_dev__gemma-4-12B__fewshot__20260828-174439.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.242,
+          "dev_metrics": {
+            "precision": 0.5301204819277109,
+            "recall": 0.3633360858794385,
+            "f1": 0.4311611954924057,
+            "f0.5": 0.4855440300154491,
+            "tp": 440,
+            "fp": 390,
+            "fn": 771
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__fewshot__20260828-180339/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__it_merlin_dev__gemma-4-12B__fewshot__20260828-180339.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.368,
+          "dev_metrics": {
+            "precision": 0.47858823529411765,
+            "recall": 0.3424242424242424,
+            "f1": 0.3992149165848871,
+            "f0.5": 0.4433304272013949,
+            "tp": 1017,
+            "fp": 1108,
+            "fn": 1953
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_swell_dev__gemma-4-12B__fewshot__20260828-182358/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__sv_swell_dev__gemma-4-12B__fewshot__20260828-182358.json"
+        }
+      }
+    },
+    "qwen-base-fewshot": {
+      "approach": "decoder-thresh",
+      "checkpoint": "Qwen3.5-9B-Base",
+      "tag": "fewshot",
+      "datasets": {
+        "czech/cs_geccc_test_unlabelled": {
+          "dev_dataset": "czech/cs_geccc_dev",
+          "threshold": 0.543,
+          "dev_metrics": {
+            "precision": 0.7074047447879224,
+            "recall": 0.36720985197163825,
+            "f1": 0.4834588928922371,
+            "f0.5": 0.5968218025959322,
+            "tp": 2952,
+            "fp": 1221,
+            "fn": 5087
+          },
+          "source_data": "decoder-probability-thresh/outputs/cs_geccc_dev__Qwen3.5-9B-Base__fewshot__20260828-161221/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__cs_geccc_dev__Qwen3.5-9B-Base__fewshot__20260828-161221.json"
+        },
+        "english/en_fce_test_unlabelled": {
+          "dev_dataset": "english/en_fce_dev",
+          "threshold": 0.213,
+          "dev_metrics": {
+            "precision": 0.6926605504587156,
+            "recall": 0.26184971098265897,
+            "f1": 0.38003355704697983,
+            "f0.5": 0.5211688909341924,
+            "tp": 906,
+            "fp": 402,
+            "fn": 2554
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_fce_dev__Qwen3.5-9B-Base__fewshot__20260828-170548/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_fce_dev__Qwen3.5-9B-Base__fewshot__20260828-170548.json"
+        },
+        "english/en_realec_test_unlabelled": {
+          "dev_dataset": "english/en_realec_dev",
+          "threshold": 0.264,
+          "dev_metrics": {
+            "precision": 0.5713028169014085,
+            "recall": 0.24028137726767865,
+            "f1": 0.3382851185822257,
+            "f0.5": 0.4478951000690132,
+            "tp": 1947,
+            "fp": 1461,
+            "fn": 6156
+          },
+          "source_data": "decoder-probability-thresh/outputs/en_realec_dev__Qwen3.5-9B-Base__fewshot__20260828-184008/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__en_realec_dev__Qwen3.5-9B-Base__fewshot__20260828-184008.json"
+        },
+        "german/de_falko-merlin_test_unlabelled": {
+          "dev_dataset": "german/de_falko-merlin_dev",
+          "threshold": 0.366,
+          "dev_metrics": {
+            "precision": 0.7304227304227304,
+            "recall": 0.34768266534718784,
+            "f1": 0.4711140909598838,
+            "f0.5": 0.5986255466575794,
+            "tp": 2108,
+            "fp": 778,
+            "fn": 3955
+          },
+          "source_data": "decoder-probability-thresh/outputs/de_falko-merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-194336/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__de_falko-merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-194336.json"
+        },
+        "italian/it_merlin_test_unlabelled": {
+          "dev_dataset": "italian/it_merlin_dev",
+          "threshold": 0.413,
+          "dev_metrics": {
+            "precision": 0.7406749555950266,
+            "recall": 0.34434351775392236,
+            "f1": 0.47012401352874855,
+            "f0.5": 0.6020791221484262,
+            "tp": 417,
+            "fp": 146,
+            "fn": 794
+          },
+          "source_data": "decoder-probability-thresh/outputs/it_merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-200936/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__it_merlin_dev__Qwen3.5-9B-Base__fewshot__20260828-200936.json"
+        },
+        "swedish/sv_swell_test_unlabelled": {
+          "dev_dataset": "swedish/sv_swell_dev",
+          "threshold": 0.583,
+          "dev_metrics": {
+            "precision": 0.6784,
+            "recall": 0.2855218855218855,
+            "f1": 0.4018957345971564,
+            "f0.5": 0.5319949811794229,
+            "tp": 848,
+            "fp": 402,
+            "fn": 2122
+          },
+          "source_data": "decoder-probability-thresh/outputs/sv_swell_dev__Qwen3.5-9B-Base__fewshot__20260828-204058/data.json",
+          "source_result": "standard-eval/results/decoder-thresh__sv_swell_dev__Qwen3.5-9B-Base__fewshot__20260828-204058.json"
+        }
+      }
+    }
+  }
+}

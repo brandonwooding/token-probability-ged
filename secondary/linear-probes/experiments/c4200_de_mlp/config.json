@@ -1,0 +1,15 @@
+{
+  "date": "20260804-192745",
+  "train_dir": "secondary/linear-probes/features/c4200_de/train",
+  "dev_dir": "secondary/linear-probes/features/c4200_de/val",
+  "learning_rate": 0.001,
+  "batch_size": 256,
+  "eval_batch_size": 2048,
+  "epochs": 50,
+  "patience": 10,
+  "selection_metric": "f0.5",
+  "device": "cuda",
+  "head": "mlp",
+  "mlp_hidden": 256,
+  "dropout": 0.1
+}

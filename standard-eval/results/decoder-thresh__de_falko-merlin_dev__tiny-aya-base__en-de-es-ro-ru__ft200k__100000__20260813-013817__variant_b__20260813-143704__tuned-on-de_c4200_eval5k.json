@@ -1,0 +1,298 @@
+{
+  "approach": "prob-threshold",
+  "tag": "de_falko-merlin_dev__tiny-aya-base__en-de-es-ro-ru__ft200k__100000__20260813-013817__variant_b__20260813-143704__tuned-on-de_c4200_eval5k",
+  "meta": {
+    "dataset": "de_falko-merlin_dev",
+    "source": "decoder-probability-thresh/outputs/de_falko-merlin_dev__tiny-aya-base__en-de-es-ro-ru__ft200k__100000__20260813-013817__variant_b__20260813-143704/data.json",
+    "threshold": 0.946,
+    "threshold_selection": "auto (max incorrect-class F0.5 = 9.14% on de_c4200_eval5k, held out from this scoring set)",
+    "tuned_on": "de_c4200_eval5k",
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.261685805498642,
+    "recall": 0.9058222002309088,
+    "f1": 0.40606284658040664,
+    "f0.5": 0.30507382431036206,
+    "tp": 5492,
+    "fp": 15495,
+    "fn": 571,
+    "tn": 17886
+  },
+  "coverage": {
+    "scored_units": 2503,
+    "total_units": 2503,
+    "scored_tokens": 39444,
+    "total_tokens": 39444,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "R:SPELL": {
+      "recall": 0.9865853658536585,
+      "hits": 809,
+      "support": 820
+    },
+    "R:DET:FORM": {
+      "recall": 0.9668587896253602,
+      "hits": 671,
+      "support": 694
+    },
+    "R:OTHER": {
+      "recall": 0.8813813813813813,
+      "hits": 587,
+      "support": 666
+    },
+    "R:ORTH": {
+      "recall": 0.8887122416534181,
+      "hits": 559,
+      "support": 629
+    },
+    "R:WO": {
+      "recall": 0.7219251336898396,
+      "hits": 270,
+      "support": 374
+    },
+    "R:ADJ:FORM": {
+      "recall": 0.9205776173285198,
+      "hits": 255,
+      "support": 277
+    },
+    "R:NOUN:FORM": {
+      "recall": 0.896551724137931,
+      "hits": 234,
+      "support": 261
+    },
+    "U:PUNCT": {
+      "recall": 0.96,
+      "hits": 216,
+      "support": 225
+    },
+    "R:ADP": {
+      "recall": 0.9311926605504587,
+      "hits": 203,
+      "support": 218
+    },
+    "R:MORPH": {
+      "recall": 0.973404255319149,
+      "hits": 183,
+      "support": 188
+    },
+    "M:DET": {
+      "recall": 0.8759124087591241,
+      "hits": 120,
+      "support": 137
+    },
+    "M:PRON": {
+      "recall": 0.9008264462809917,
+      "hits": 109,
+      "support": 121
+    },
+    "R:VERB:FORM": {
+      "recall": 0.9572649572649573,
+      "hits": 112,
+      "support": 117
+    },
+    "U:OTHER": {
+      "recall": 0.7433628318584071,
+      "hits": 84,
+      "support": 113
+    },
+    "R:AUX:FORM": {
+      "recall": 0.9405940594059405,
+      "hits": 95,
+      "support": 101
+    },
+    "R:NOUN": {
+      "recall": 0.8791208791208791,
+      "hits": 80,
+      "support": 91
+    },
+    "U:VERB": {
+      "recall": 0.9577464788732394,
+      "hits": 68,
+      "support": 71
+    },
+    "U:PRON": {
+      "recall": 0.7846153846153846,
+      "hits": 51,
+      "support": 65
+    },
+    "R:PRON:FORM": {
+      "recall": 0.8769230769230769,
+      "hits": 57,
+      "support": 65
+    },
+    "U:AUX": {
+      "recall": 0.9384615384615385,
+      "hits": 61,
+      "support": 65
+    },
+    "M:AUX": {
+      "recall": 0.95,
+      "hits": 57,
+      "support": 60
+    },
+    "M:VERB": {
+      "recall": 0.9661016949152542,
+      "hits": 57,
+      "support": 59
+    },
+    "R:VERB": {
+      "recall": 0.864406779661017,
+      "hits": 51,
+      "support": 59
+    },
+    "M:ADP": {
+      "recall": 0.7758620689655172,
+      "hits": 45,
+      "support": 58
+    },
+    "M:OTHER": {
+      "recall": 0.8545454545454545,
+      "hits": 47,
+      "support": 55
+    },
+    "R:PRON": {
+      "recall": 0.8653846153846154,
+      "hits": 45,
+      "support": 52
+    },
+    "U:ADP": {
+      "recall": 0.975,
+      "hits": 39,
+      "support": 40
+    },
+    "M:PART": {
+      "recall": 0.9722222222222222,
+      "hits": 35,
+      "support": 36
+    },
+    "M:PUNCT": {
+      "recall": 0.9166666666666666,
+      "hits": 33,
+      "support": 36
+    },
+    "U:DET": {
+      "recall": 0.9166666666666666,
+      "hits": 33,
+      "support": 36
+    },
+    "U:ADV": {
+      "recall": 0.8387096774193549,
+      "hits": 26,
+      "support": 31
+    },
+    "R:AUX": {
+      "recall": 0.9666666666666667,
+      "hits": 29,
+      "support": 30
+    },
+    "M:ADV": {
+      "recall": 0.7272727272727273,
+      "hits": 16,
+      "support": 22
+    },
+    "R:ADV": {
+      "recall": 0.7727272727272727,
+      "hits": 17,
+      "support": 22
+    },
+    "U:PART": {
+      "recall": 0.9047619047619048,
+      "hits": 19,
+      "support": 21
+    },
+    "U:ADJ": {
+      "recall": 0.7222222222222222,
+      "hits": 13,
+      "support": 18
+    },
+    "R:DET": {
+      "recall": 0.9444444444444444,
+      "hits": 17,
+      "support": 18
+    },
+    "R:PUNCT": {
+      "recall": 0.6470588235294118,
+      "hits": 11,
+      "support": 17
+    },
+    "U:SCONJ": {
+      "recall": 1.0,
+      "hits": 16,
+      "support": 16
+    },
+    "R:ADJ": {
+      "recall": 0.9285714285714286,
+      "hits": 13,
+      "support": 14
+    },
+    "M:ADJ": {
+      "recall": 0.6923076923076923,
+      "hits": 9,
+      "support": 13
+    },
+    "M:SCONJ": {
+      "recall": 0.6666666666666666,
+      "hits": 6,
+      "support": 9
+    },
+    "M:CONJ": {
+      "recall": 0.875,
+      "hits": 7,
+      "support": 8
+    },
+    "M:NOUN": {
+      "recall": 0.8571428571428571,
+      "hits": 6,
+      "support": 7
+    },
+    "U:NOUN": {
+      "recall": 0.6666666666666666,
+      "hits": 4,
+      "support": 6
+    },
+    "R:SCONJ": {
+      "recall": 0.8333333333333334,
+      "hits": 5,
+      "support": 6
+    },
+    "U:PNOUN": {
+      "recall": 0.8,
+      "hits": 4,
+      "support": 5
+    },
+    "R:CONJ": {
+      "recall": 1.0,
+      "hits": 3,
+      "support": 3
+    },
+    "R:PNOUN": {
+      "recall": 0.3333333333333333,
+      "hits": 1,
+      "support": 3
+    },
+    "R:ADV:FORM": {
+      "recall": 1.0,
+      "hits": 2,
+      "support": 2
+    },
+    "M:PNOUN": {
+      "recall": 1.0,
+      "hits": 1,
+      "support": 1
+    },
+    "U:CONJ": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 1
+    },
+    "M:*": {
+      "recall": 1.0,
+      "hits": 1,
+      "support": 1
+    }
+  }
+}

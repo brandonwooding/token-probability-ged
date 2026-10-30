@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__Apertus-8B-2509__fewshot__20260828-175653",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "decoder-probability-thresh/outputs/en_realec_dev__Apertus-8B-2509__fewshot__20260828-175653/data.json",
+    "threshold": 0.035,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 36.46%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.6289954337899544,
+    "recall": 0.1359990127113415,
+    "f1": 0.2236428209030949,
+    "f0.5": 0.36463503408113296,
+    "tp": 1102,
+    "fp": 650,
+    "fn": 7001,
+    "tn": 79255
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.1359990127113415,
+      "hits": 1102,
+      "support": 8103
+    }
+  }
+}

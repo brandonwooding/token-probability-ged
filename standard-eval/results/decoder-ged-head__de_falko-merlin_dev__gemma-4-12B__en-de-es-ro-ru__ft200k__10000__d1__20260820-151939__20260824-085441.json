@@ -1,0 +1,298 @@
+{
+  "approach": "prob-threshold",
+  "tag": "de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__d1__20260820-151939__20260824-085441",
+  "meta": {
+    "dataset": "de_falko-merlin_dev",
+    "source": "finetuning/decoder_ged/outputs/de_falko-merlin_dev__gemma-4-12B__en-de-es-ro-ru__ft200k__10000__d1__20260820-151939__20260824-085441/data.json",
+    "threshold": 0.55,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 50.61%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.599366085578447,
+    "recall": 0.3118918027379185,
+    "f1": 0.41028422651334345,
+    "f0.5": 0.5060750414815608,
+    "tp": 1891,
+    "fp": 1264,
+    "fn": 4172,
+    "tn": 32117
+  },
+  "coverage": {
+    "scored_units": 2503,
+    "total_units": 2503,
+    "scored_tokens": 39444,
+    "total_tokens": 39444,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "R:SPELL": {
+      "recall": 0.4975609756097561,
+      "hits": 408,
+      "support": 820
+    },
+    "R:DET:FORM": {
+      "recall": 0.3126801152737752,
+      "hits": 217,
+      "support": 694
+    },
+    "R:OTHER": {
+      "recall": 0.36186186186186187,
+      "hits": 241,
+      "support": 666
+    },
+    "R:ORTH": {
+      "recall": 0.2527821939586645,
+      "hits": 159,
+      "support": 629
+    },
+    "R:WO": {
+      "recall": 0.12299465240641712,
+      "hits": 46,
+      "support": 374
+    },
+    "R:ADJ:FORM": {
+      "recall": 0.4404332129963899,
+      "hits": 122,
+      "support": 277
+    },
+    "R:NOUN:FORM": {
+      "recall": 0.3524904214559387,
+      "hits": 92,
+      "support": 261
+    },
+    "U:PUNCT": {
+      "recall": 0.26222222222222225,
+      "hits": 59,
+      "support": 225
+    },
+    "R:ADP": {
+      "recall": 0.12385321100917432,
+      "hits": 27,
+      "support": 218
+    },
+    "R:MORPH": {
+      "recall": 0.5904255319148937,
+      "hits": 111,
+      "support": 188
+    },
+    "M:DET": {
+      "recall": 0.21897810218978103,
+      "hits": 30,
+      "support": 137
+    },
+    "M:PRON": {
+      "recall": 0.049586776859504134,
+      "hits": 6,
+      "support": 121
+    },
+    "R:VERB:FORM": {
+      "recall": 0.5897435897435898,
+      "hits": 69,
+      "support": 117
+    },
+    "U:OTHER": {
+      "recall": 0.18584070796460178,
+      "hits": 21,
+      "support": 113
+    },
+    "R:AUX:FORM": {
+      "recall": 0.5148514851485149,
+      "hits": 52,
+      "support": 101
+    },
+    "R:NOUN": {
+      "recall": 0.3626373626373626,
+      "hits": 33,
+      "support": 91
+    },
+    "U:VERB": {
+      "recall": 0.15492957746478872,
+      "hits": 11,
+      "support": 71
+    },
+    "U:PRON": {
+      "recall": 0.12307692307692308,
+      "hits": 8,
+      "support": 65
+    },
+    "R:PRON:FORM": {
+      "recall": 0.4153846153846154,
+      "hits": 27,
+      "support": 65
+    },
+    "U:AUX": {
+      "recall": 0.12307692307692308,
+      "hits": 8,
+      "support": 65
+    },
+    "M:AUX": {
+      "recall": 0.05,
+      "hits": 3,
+      "support": 60
+    },
+    "M:VERB": {
+      "recall": 0.1016949152542373,
+      "hits": 6,
+      "support": 59
+    },
+    "R:VERB": {
+      "recall": 0.3559322033898305,
+      "hits": 21,
+      "support": 59
+    },
+    "M:ADP": {
+      "recall": 0.25862068965517243,
+      "hits": 15,
+      "support": 58
+    },
+    "M:OTHER": {
+      "recall": 0.07272727272727272,
+      "hits": 4,
+      "support": 55
+    },
+    "R:PRON": {
+      "recall": 0.28846153846153844,
+      "hits": 15,
+      "support": 52
+    },
+    "U:ADP": {
+      "recall": 0.075,
+      "hits": 3,
+      "support": 40
+    },
+    "M:PART": {
+      "recall": 0.3333333333333333,
+      "hits": 12,
+      "support": 36
+    },
+    "M:PUNCT": {
+      "recall": 0.25,
+      "hits": 9,
+      "support": 36
+    },
+    "U:DET": {
+      "recall": 0.2222222222222222,
+      "hits": 8,
+      "support": 36
+    },
+    "U:ADV": {
+      "recall": 0.1935483870967742,
+      "hits": 6,
+      "support": 31
+    },
+    "R:AUX": {
+      "recall": 0.06666666666666667,
+      "hits": 2,
+      "support": 30
+    },
+    "M:ADV": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 22
+    },
+    "R:ADV": {
+      "recall": 0.13636363636363635,
+      "hits": 3,
+      "support": 22
+    },
+    "U:PART": {
+      "recall": 0.09523809523809523,
+      "hits": 2,
+      "support": 21
+    },
+    "U:ADJ": {
+      "recall": 0.2777777777777778,
+      "hits": 5,
+      "support": 18
+    },
+    "R:DET": {
+      "recall": 0.5,
+      "hits": 9,
+      "support": 18
+    },
+    "R:PUNCT": {
+      "recall": 0.17647058823529413,
+      "hits": 3,
+      "support": 17
+    },
+    "U:SCONJ": {
+      "recall": 0.1875,
+      "hits": 3,
+      "support": 16
+    },
+    "R:ADJ": {
+      "recall": 0.2857142857142857,
+      "hits": 4,
+      "support": 14
+    },
+    "M:ADJ": {
+      "recall": 0.23076923076923078,
+      "hits": 3,
+      "support": 13
+    },
+    "M:SCONJ": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 9
+    },
+    "M:CONJ": {
+      "recall": 0.125,
+      "hits": 1,
+      "support": 8
+    },
+    "M:NOUN": {
+      "recall": 0.14285714285714285,
+      "hits": 1,
+      "support": 7
+    },
+    "U:NOUN": {
+      "recall": 0.5,
+      "hits": 3,
+      "support": 6
+    },
+    "R:SCONJ": {
+      "recall": 0.3333333333333333,
+      "hits": 2,
+      "support": 6
+    },
+    "U:PNOUN": {
+      "recall": 0.2,
+      "hits": 1,
+      "support": 5
+    },
+    "R:CONJ": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 3
+    },
+    "R:PNOUN": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 3
+    },
+    "R:ADV:FORM": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 2
+    },
+    "M:PNOUN": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 1
+    },
+    "U:CONJ": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 1
+    },
+    "M:*": {
+      "recall": 0.0,
+      "hits": 0,
+      "support": 1
+    }
+  }
+}

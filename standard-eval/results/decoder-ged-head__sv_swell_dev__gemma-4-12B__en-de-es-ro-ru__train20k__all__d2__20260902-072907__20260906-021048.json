@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-021048",
+  "meta": {
+    "dataset": "sv_swell_dev",
+    "source": "finetuning/decoder_ged/outputs/sv_swell_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-021048/data.json",
+    "threshold": 0.765,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 67.41%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7587719298245614,
+    "recall": 0.465993265993266,
+    "f1": 0.5773884021693785,
+    "f0.5": 0.6740697447886227,
+    "tp": 1384,
+    "fp": 440,
+    "fn": 1586,
+    "tn": 12275
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.465993265993266,
+      "hits": 1384,
+      "support": 2970
+    }
+  }
+}

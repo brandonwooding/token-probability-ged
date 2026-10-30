@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "en_realec_dev__gemma-4-12B-it__20260828-050742",
+  "meta": {
+    "dataset": "english/en_realec_dev",
+    "source": "GED-by-instruction/outputs/en_realec_dev__gemma-4-12B-it__20260828-050742/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.3745307103168644,
+    "recall": 0.30778723929408863,
+    "f1": 0.3378945942284244,
+    "f0.5": 0.3589625492961801,
+    "tp": 2494,
+    "fp": 4165,
+    "fn": 5609,
+    "tn": 75740
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.30778723929408863,
+      "hits": 2494,
+      "support": 8103
+    }
+  }
+}

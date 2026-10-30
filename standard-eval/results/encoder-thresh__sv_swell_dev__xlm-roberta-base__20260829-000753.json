@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "sv_swell_dev__xlm-roberta-base__20260829-000753",
+  "meta": {
+    "dataset": "sv_swell_dev",
+    "source": "secondary/encoder-probability-thresh/outputs/sv_swell_dev__xlm-roberta-base__20260829-000753/data.json",
+    "threshold": 0.003019951720402016,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 52.28%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.5739348370927319,
+    "recall": 0.38552188552188554,
+    "f1": 0.46122860020140993,
+    "f0.5": 0.5228310502283106,
+    "tp": 1145,
+    "fp": 850,
+    "fn": 1825,
+    "tn": 11865
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.38552188552188554,
+      "hits": 1145,
+      "support": 2970
+    }
+  }
+}

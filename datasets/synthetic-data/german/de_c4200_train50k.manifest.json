@@ -1,0 +1,121 @@
+{
+  "schema": "c4-merrant-rich-v1",
+  "dataset_id": "german/de_c4200_train50k",
+  "language": "de",
+  "source": "datasets/synthetic-data/sources/c4200m_multilingual/pairs/de.sentence_pairs.tsv",
+  "source_line_range": {
+    "start": 60000,
+    "end": 110000
+  },
+  "expected_pairs": 50000,
+  "sampling": "contiguous range after invalid-Unicode filtering of the MD5-ordered sentence-pair file",
+  "annotator": {
+    "name": "mERRANT",
+    "implementation_commit": "fc8409b89317efac81dba0ba8788c744d19ffb2c",
+    "spacy_model": "de_core_news_sm",
+    "spacy_version": "3.8.14",
+    "aspell_lang": null,
+    "whitespace_crossing_tokenizer_rules_removed": 4
+  },
+  "ged_policy": {
+    "name": "exclude-noop-unk-punct",
+    "exclude": [
+      "noop",
+      "UNK",
+      "*:PUNCT"
+    ],
+    "span_projection": "all retained source-span tokens",
+    "missing_projection": "next source token; none at sentence end",
+    "m2_contains_excluded_edits": true
+  },
+  "counts": {
+    "tokens": 1075552,
+    "incorrect_tokens": 87779,
+    "sentences": 50000,
+    "edits": 107223,
+    "pairs_written": 50000,
+    "included_edits": 70835,
+    "sentence_final_missing": 1099,
+    "excluded_edits": 36388,
+    "noop_sentences": 196
+  },
+  "error_types": {
+    "M:PUNCT": 22388,
+    "R:NOUN": 12590,
+    "R:ORTH": 11706,
+    "R:PUNCT": 8587,
+    "R:OTHER": 6144,
+    "R:ADJ": 5570,
+    "U:PUNCT": 5413,
+    "R:DET": 5321,
+    "R:VERB": 3334,
+    "R:ADV": 3200,
+    "R:PROPN": 2926,
+    "R:ADP": 2622,
+    "M:DET": 1514,
+    "R:PRON": 1340,
+    "R:NOUN:NUM": 1146,
+    "R:MORPH": 1118,
+    "M:ADP": 1019,
+    "R:VERB:TENSE": 994,
+    "M:PRON": 924,
+    "U:VERB": 629,
+    "U:PRON": 564,
+    "U:VERB:TENSE": 561,
+    "M:ADV": 550,
+    "U:OTHER": 549,
+    "M:OTHER": 545,
+    "R:X": 520,
+    "R:NUM": 502,
+    "U:ADV": 495,
+    "M:VERB": 461,
+    "M:VERB:TENSE": 447,
+    "R:SCONJ": 406,
+    "U:NOUN": 400,
+    "R:CCONJ": 375,
+    "U:ADP": 304,
+    "M:NOUN": 280,
+    "U:PROPN": 208,
+    "M:PART": 197,
+    "M:PROPN": 197,
+    "U:DET": 182,
+    "M:NUM": 168,
+    "R:WO": 131,
+    "U:NUM": 112,
+    "U:PART": 93,
+    "M:CCONJ": 86,
+    "U:X": 69,
+    "R:PART": 65,
+    "M:X": 60,
+    "M:ADJ": 54,
+    "M:SCONJ": 44,
+    "U:ADJ": 41,
+    "U:CCONJ": 40,
+    "U:SCONJ": 30,
+    "R:VERB:SVA": 1,
+    "R:INTJ": 1
+  },
+  "excluded_error_types": {
+    "M:PUNCT": 22388,
+    "R:PUNCT": 8587,
+    "U:PUNCT": 5413
+  },
+  "malformed_source_lines_seen_before_global_stop": 0,
+  "invalid_unicode_pairs_seen_before_global_stop": 1875,
+  "invalid_unicode_filter": {
+    "replacement_character": true,
+    "unicode_categories": [
+      "Cc",
+      "Cf",
+      "Cn",
+      "Co",
+      "Cs"
+    ]
+  },
+  "files": {
+    "pairs": "de_c4200_train50k.pairs.tsv",
+    "tsv": "de_c4200_train50k.tsv",
+    "m2": "de_c4200_train50k.m2",
+    "jsonl": "de_c4200_train50k.jsonl"
+  }
+}

@@ -1,0 +1,31 @@
+diff --git a/multilingual/merrant/classification.py b/multilingual/merrant/classification.py
+index 27e290b..efc957b 100644
+--- a/multilingual/merrant/classification.py
++++ b/multilingual/merrant/classification.py
+@@ -5,7 +5,10 @@ from typing import Iterator, Optional
+ import spacy
+ 
+ from merrant import utils
+-import aspell
++try:
++  import aspell
++except ImportError:  # GNU Aspell is an optional enhancement, not an aligner dependency.
++  aspell = None
+ 
+ class Classifier(metaclass=abc.ABCMeta):
+   """Interface for classifiers that assign tags to EditSpans."""
+@@ -131,6 +134,9 @@ class GenericClassifier(Classifier):
+ 
+   def initialize(self) -> None:
+     if self._aspell_lang is not None:
++      if aspell is None:
++        raise ImportError(
++            "GNU Aspell Python bindings are required when aspell_lang is set")
+       self._aspell = aspell.Speller('lang', self._aspell_lang)
+ 
+   def _get_one_sided_tag(self, tokens: list[spacy.tokens.Token]) -> str:
+@@ -253,4 +259,3 @@ class GenericClassifier(Classifier):
+                                    target_regular_tokens[0])
+ 
+     return self._get_two_sided_tag(source_regular_tokens, target_regular_tokens)
+-

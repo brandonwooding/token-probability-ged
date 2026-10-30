@@ -1,0 +1,66 @@
+{
+  "kind": "ft-decoder",
+  "base_model": "google/gemma-4-12B",
+  "model_id": "gemma-4-12B",
+  "run_name": "gemma-4-12B__en-de-es-ro-ru__ft200k__4000__20260811-112351",
+  "template": "variant_b",
+  "languages": [
+    "en",
+    "de",
+    "es",
+    "ro",
+    "ru"
+  ],
+  "train_split": "ft200k",
+  "val_split": "ftval5k",
+  "max_per_lang": 4000,
+  "n_train": 19902,
+  "n_train_dropped_too_long": 98,
+  "n_val": 991,
+  "epochs": 1,
+  "batch_size": 4,
+  "grad_accum": 8,
+  "effective_batch": 32,
+  "lr": 0.0001,
+  "max_length": 256,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05
+  },
+  "seed": 0,
+  "total_steps": 622,
+  "best_step": 500,
+  "best_separation": 0.02456380742167441,
+  "selection": "max mean P(clean target) - mean P(corrupted source) in the perfect slot",
+  "history": [
+    {
+      "step": 250,
+      "val_loss": 0.19022337678489426,
+      "p_target": 0.9398000907220293,
+      "p_source": 0.9254541639684379,
+      "separation": 0.014345926753591365,
+      "frac_above_0.9_target": 0.8894795747062115,
+      "frac_above_0.9_source": 0.8463261021693492
+    },
+    {
+      "step": 500,
+      "val_loss": 0.18095886747863504,
+      "p_target": 0.9387951727776926,
+      "p_source": 0.9142313653560182,
+      "separation": 0.02456380742167441,
+      "frac_above_0.9_target": 0.8841634023503078,
+      "frac_above_0.9_source": 0.8216934919524143
+    },
+    {
+      "step": 622,
+      "val_loss": 0.18039418529388646,
+      "p_target": 0.9390340322155595,
+      "p_source": 0.9183669855746462,
+      "separation": 0.020667046640913234,
+      "frac_above_0.9_target": 0.8861219921656407,
+      "frac_above_0.9_source": 0.8274317704688593
+    }
+  ],
+  "timestamp": "20260811-112351"
+}

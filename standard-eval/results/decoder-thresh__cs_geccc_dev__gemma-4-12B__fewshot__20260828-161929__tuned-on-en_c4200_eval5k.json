@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "cs_geccc_dev__gemma-4-12B__fewshot__20260828-161929__tuned-on-en_c4200_eval5k",
+  "meta": {
+    "dataset": "cs_geccc_dev",
+    "source": "decoder-probability-thresh/outputs/cs_geccc_dev__gemma-4-12B__fewshot__20260828-161929/data.json",
+    "threshold": 0.649,
+    "threshold_selection": "auto (max incorrect-class F0.5 = 47.29% on en_c4200_eval5k, held out from this scoring set)",
+    "tuned_on": "en_c4200_eval5k",
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.5503711558854719,
+    "recall": 0.5810424182112203,
+    "f1": 0.5652910565170035,
+    "f0.5": 0.556243599209279,
+    "tp": 4671,
+    "fp": 3816,
+    "fn": 3368,
+    "tn": 20084
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.5810424182112203,
+      "hits": 4671,
+      "support": 8039
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__xlm-roberta-base__20260828-235511",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "secondary/encoder-probability-thresh/outputs/en_realec_dev__xlm-roberta-base__20260828-235511/data.json",
+    "threshold": 0.00015848931924611142,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 34.76%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.4501833740831296,
+    "recall": 0.18178452425027766,
+    "f1": 0.25898901098901095,
+    "f0.5": 0.3475532065499505,
+    "tp": 1473,
+    "fp": 1799,
+    "fn": 6630,
+    "tn": 78106
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.18178452425027766,
+      "hits": 1473,
+      "support": 8103
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# Versions are the ones every reported number was produced with (Python 3.12.3,
+# CUDA GPUs on Imperial's cx3 cluster). One environment covers inference,
+# training and plotting; the dataset builders use their own, see
+# datasets/synthetic-data/build/merrant/requirements.txt.
+#
+# The scorer (standard-eval/) and the instruction/threshold adapters are pure
+# stdlib: none of this is needed just to score existing predictions.
+
+# Core: every approach that runs a model.
+torch==2.11.0
+transformers==5.12.1
+tokenizers==0.22.2
+safetensors==0.8.0
+accelerate==1.14.0
+huggingface_hub==1.20.1
+numpy==2.3.5
+python-dotenv==1.2.2
+
+# Probes, confidence classifiers, plotting.
+scikit-learn==1.9.0
+scipy==1.18.0
+pandas==3.0.3
+matplotlib==3.11.0
+
+# Synthetic-data loading and LoRA adaptation (finetuning/).
+datasets==5.0.0
+peft==0.20.0
+
+# Instruction-following inference with schema-constrained decoding
+# (GED-by-instruction/ged_inference.py). GPU-only.
+vllm==0.23.0
+xgrammar==0.2.2

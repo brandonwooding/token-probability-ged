@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "sv_swell_dev__gemma-4-12B-it__20260828-055755",
+  "meta": {
+    "dataset": "swedish/sv_swell_dev",
+    "source": "GED-by-instruction/outputs/sv_swell_dev__gemma-4-12B-it__20260828-055755/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.6671875,
+    "recall": 0.28754208754208754,
+    "f1": 0.40188235294117647,
+    "f0.5": 0.5278121137206427,
+    "tp": 854,
+    "fp": 426,
+    "fn": 2116,
+    "tn": 12289
+  },
+  "coverage": {
+    "scored_units": 911,
+    "total_units": 911,
+    "scored_tokens": 15685,
+    "total_tokens": 15685,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.28754208754208754,
+      "hits": 854,
+      "support": 2970
+    }
+  }
+}

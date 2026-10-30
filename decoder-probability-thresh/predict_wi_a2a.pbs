@@ -1,0 +1,22 @@
+#!/bin/bash
+# Generate A2a probabilities on W&I dev (threshold selection) and public test.
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=A100
+#PBS -N a2a_wi_dev_test
+#PBS -j oe
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+ADAPTER="${ADAPTER:-$PROJECT_ROOT/finetuning/decoder_ged/models/gemma-4-12B__en-de-es-ro-ru__train20k__all__a2a-skip__20260829-205946}"
+TEMPLATE="${TEMPLATE:-fewshot}"
+SCRIPT="$PROJECT_ROOT/decoder-probability-thresh/llm-decoder-threshold.py"
+
+for DATASET in english/en_wi2024_dev english/en_wi2024_test_unlabelled; do
+  python "$SCRIPT" --dataset "$DATASET" --model google/gemma-4-12B \
+    --template "$TEMPLATE" --adapter "$ADAPTER"
+done

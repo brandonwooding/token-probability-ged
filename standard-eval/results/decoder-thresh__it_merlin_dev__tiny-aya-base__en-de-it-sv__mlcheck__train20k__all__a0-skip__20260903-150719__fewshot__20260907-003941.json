@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__tiny-aya-base__en-de-it-sv__mlcheck__train20k__all__a0-skip__20260903-150719__fewshot__20260907-003941",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "decoder-probability-thresh/outputs/it_merlin_dev__tiny-aya-base__en-de-it-sv__mlcheck__train20k__all__a0-skip__20260903-150719__fewshot__20260907-003941/data.json",
+    "threshold": 0.338,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 67.98%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7817919075144508,
+    "recall": 0.4467382328654005,
+    "f1": 0.5685759327377824,
+    "f0.5": 0.6798190500125659,
+    "tp": 541,
+    "fp": 151,
+    "fn": 670,
+    "tn": 7782
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.4467382328654005,
+      "hits": 541,
+      "support": 1211
+    }
+  }
+}

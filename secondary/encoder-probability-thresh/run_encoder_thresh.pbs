@@ -1,0 +1,33 @@
+#!/bin/bash
+# Sized for ONE dataset. The loop below takes a list, so override -l walltime
+# and -l select at qsub for a multi-dataset sweep. Note this script loads the
+# model in fp32 (no dtype= is passed), so unlike the decoder it gains nothing
+# from a bf16-capable card and RTX6000 costs it no emulation penalty.
+#PBS -l walltime=02:00:00
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_type=RTX6000
+#PBS -N run_encoder_thresh
+#PBS -j oe
+mkdir -p ~/logs
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+# mmBERT-base is the multilingual ModernBERT, so one encoder covers every
+# MultiGED language and the cross-language numbers stay comparable. Pass
+# MODEL=answerdotai/ModernBERT-base for the English-only baseline.
+MODEL="${MODEL:-jhu-clsp/mmBERT-base}"
+# Space-separated list of dataset ids, each '<language>/<stem>' or a bare stem
+# (see paths.py). One run folder is written per dataset as it finishes, so an
+# overrun costs only the in-flight dataset -- same contract as the decoder job.
+DATASET="${DATASET:-english/en_fce_dev}"
+
+for DS in $DATASET; do
+    python "$PROJECT_ROOT/secondary/encoder-probability-thresh/llm-encoder-threshold.py" \
+        --dataset "$DS" --model "$MODEL"
+done

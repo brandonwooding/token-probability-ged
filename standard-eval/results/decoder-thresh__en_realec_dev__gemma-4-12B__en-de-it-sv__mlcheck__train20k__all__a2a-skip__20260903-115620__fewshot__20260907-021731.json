@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-021731",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "decoder-probability-thresh/outputs/en_realec_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__fewshot__20260907-021731/data.json",
+    "threshold": 0.033,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 52.04%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.6671624033313504,
+    "recall": 0.2768110576329754,
+    "f1": 0.3912778020061055,
+    "f0.5": 0.5203934852211034,
+    "tp": 2243,
+    "fp": 1119,
+    "fn": 5860,
+    "tn": 78786
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.2768110576329754,
+      "hits": 2243,
+      "support": 8103
+    }
+  }
+}

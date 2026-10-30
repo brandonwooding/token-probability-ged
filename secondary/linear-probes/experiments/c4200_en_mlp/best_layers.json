@@ -1,0 +1,347 @@
+{
+  "0": {
+    "layer": 0,
+    "epoch": 27,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3152757442654954,
+    "metrics": {
+      "accuracy": 0.784294656571036,
+      "precision": 0.5761683910096326,
+      "recall": 0.1121488837193153,
+      "f1": 0.18775249222541926,
+      "f0.5": 0.3152757442654954
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_00.pt"
+  },
+  "1": {
+    "layer": 1,
+    "epoch": 19,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3455763500749771,
+    "metrics": {
+      "accuracy": 0.7889797083999043,
+      "precision": 0.6295902075572113,
+      "recall": 0.12322488802472137,
+      "f1": 0.20610953017016087,
+      "f0.5": 0.3455763500749771
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_01.pt"
+  },
+  "2": {
+    "layer": 2,
+    "epoch": 36,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4084078867367324,
+    "metrics": {
+      "accuracy": 0.7947839241747131,
+      "precision": 0.653872896676401,
+      "recall": 0.16325822020068748,
+      "f1": 0.2612802845076684,
+      "f0.5": 0.4084078867367324
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_02.pt"
+  },
+  "3": {
+    "layer": 3,
+    "epoch": 28,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.48828541758538774,
+    "metrics": {
+      "accuracy": 0.8036060234175407,
+      "precision": 0.6617505301715828,
+      "recall": 0.23835977917433424,
+      "f1": 0.35047862156987875,
+      "f0.5": 0.48828541758538774
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_03.pt"
+  },
+  "4": {
+    "layer": 4,
+    "epoch": 15,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5023268736542336,
+    "metrics": {
+      "accuracy": 0.8060141554943231,
+      "precision": 0.6698777324935161,
+      "recall": 0.2511023922780459,
+      "f1": 0.3652801979947976,
+      "f0.5": 0.5023268736542336
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_04.pt"
+  },
+  "5": {
+    "layer": 5,
+    "epoch": 13,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.526592418133674,
+    "metrics": {
+      "accuracy": 0.8104445010458394,
+      "precision": 0.6830341732827062,
+      "recall": 0.2748168466372695,
+      "f1": 0.3919383990690535,
+      "f0.5": 0.526592418133674
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_05.pt"
+  },
+  "6": {
+    "layer": 6,
+    "epoch": 16,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5490140181703251,
+    "metrics": {
+      "accuracy": 0.8143499972985698,
+      "precision": 0.6830377794911334,
+      "recall": 0.30759348633727995,
+      "f1": 0.4241698786239257,
+      "f0.5": 0.5490140181703251
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_06.pt"
+  },
+  "7": {
+    "layer": 7,
+    "epoch": 27,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5537277219547516,
+    "metrics": {
+      "accuracy": 0.8159554186830914,
+      "precision": 0.6985576923076923,
+      "recall": 0.3026978229922572,
+      "f1": 0.42237348901431654,
+      "f0.5": 0.5537277219547516
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_07.pt"
+  },
+  "8": {
+    "layer": 8,
+    "epoch": 17,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.576039559977087,
+    "metrics": {
+      "accuracy": 0.8203471723744028,
+      "precision": 0.6947479732111386,
+      "recall": 0.34217561890212145,
+      "f1": 0.4585213790536454,
+      "f0.5": 0.576039559977087
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_08.pt"
+  },
+  "9": {
+    "layer": 9,
+    "epoch": 19,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5941404996181474,
+    "metrics": {
+      "accuracy": 0.8246694607173455,
+      "precision": 0.6977318515630078,
+      "recall": 0.3727648345543558,
+      "f1": 0.4859237802118222,
+      "f0.5": 0.5941404996181474
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_09.pt"
+  },
+  "10": {
+    "layer": 10,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5985198781076089,
+    "metrics": {
+      "accuracy": 0.8263289107061539,
+      "precision": 0.7242312072892938,
+      "recall": 0.3532516232075275,
+      "f1": 0.47487689327638916,
+      "f0.5": 0.5985198781076089
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_10.pt"
+  },
+  "11": {
+    "layer": 11,
+    "epoch": 19,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6102756509979766,
+    "metrics": {
+      "accuracy": 0.828806508131305,
+      "precision": 0.6904008742163685,
+      "recall": 0.41679108364292905,
+      "f1": 0.5197886897029531,
+      "f0.5": 0.6102756509979766
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_11.pt"
+  },
+  "12": {
+    "layer": 12,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6165094970228607,
+    "metrics": {
+      "accuracy": 0.8307283827695062,
+      "precision": 0.700759789596727,
+      "recall": 0.4163049894100899,
+      "f1": 0.5223149136372547,
+      "f0.5": 0.6165094970228607
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_12.pt"
+  },
+  "13": {
+    "layer": 13,
+    "epoch": 16,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6189142041549929,
+    "metrics": {
+      "accuracy": 0.8315002199736031,
+      "precision": 0.7119056305484617,
+      "recall": 0.40651366272004447,
+      "f1": 0.5175149733684001,
+      "f0.5": 0.6189142041549929
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_13.pt"
+  },
+  "14": {
+    "layer": 14,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6225524960685763,
+    "metrics": {
+      "accuracy": 0.832542200199134,
+      "precision": 0.7074694854873562,
+      "recall": 0.42061039547237944,
+      "f1": 0.5275672850796969,
+      "f0.5": 0.6225524960685763
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_14.pt"
+  },
+  "15": {
+    "layer": 15,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6251746225565777,
+    "metrics": {
+      "accuracy": 0.8333294741473128,
+      "precision": 0.71248304734949,
+      "recall": 0.41953404395680705,
+      "f1": 0.5281031468531469,
+      "f0.5": 0.6251746225565777
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_15.pt"
+  },
+  "16": {
+    "layer": 16,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6262459685415775,
+    "metrics": {
+      "accuracy": 0.8336459274009926,
+      "precision": 0.7163323782234957,
+      "recall": 0.4166521995764036,
+      "f1": 0.5268588237876759,
+      "f0.5": 0.6262459685415775
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_16.pt"
+  },
+  "17": {
+    "layer": 17,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6333717732635501,
+    "metrics": {
+      "accuracy": 0.8358996920369556,
+      "precision": 0.7075534023342877,
+      "recall": 0.4462345057463282,
+      "f1": 0.5473011817310763,
+      "f0.5": 0.6333717732635501
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_17.pt"
+  },
+  "18": {
+    "layer": 18,
+    "epoch": 20,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6355043644439853,
+    "metrics": {
+      "accuracy": 0.8364168229637005,
+      "precision": 0.7237221339921182,
+      "recall": 0.42720738863233915,
+      "f1": 0.5372691148858129,
+      "f0.5": 0.6355043644439853
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_18.pt"
+  },
+  "19": {
+    "layer": 19,
+    "epoch": 15,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6276083305678745,
+    "metrics": {
+      "accuracy": 0.8340781562352868,
+      "precision": 0.7067950169875424,
+      "recall": 0.4333877295927225,
+      "f1": 0.5373108628742386,
+      "f0.5": 0.6276083305678745
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_19.pt"
+  },
+  "20": {
+    "layer": 20,
+    "epoch": 5,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6249101425553798,
+    "metrics": {
+      "accuracy": 0.8332522904269032,
+      "precision": 0.7335929892891918,
+      "recall": 0.3923822089510781,
+      "f1": 0.5112880604442835,
+      "f0.5": 0.6249101425553798
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_20.pt"
+  },
+  "21": {
+    "layer": 21,
+    "epoch": 25,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6229702107349264,
+    "metrics": {
+      "accuracy": 0.8326734125238304,
+      "precision": 0.7107848940452232,
+      "recall": 0.4169299677094545,
+      "f1": 0.5255717255717256,
+      "f0.5": 0.6229702107349264
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_21.pt"
+  },
+  "22": {
+    "layer": 22,
+    "epoch": 12,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.6195984852414795,
+    "metrics": {
+      "accuracy": 0.8316700241585044,
+      "precision": 0.7069128787878788,
+      "recall": 0.414707822645047,
+      "f1": 0.522747663960435,
+      "f0.5": 0.6195984852414795
+    },
+    "probe_path": "secondary/linear-probes/experiments/c4200_en_mlp/probe_layer_22.pt"
+  }
+}

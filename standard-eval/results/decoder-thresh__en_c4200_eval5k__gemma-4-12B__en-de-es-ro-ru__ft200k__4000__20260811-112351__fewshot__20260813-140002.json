@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_c4200_eval5k__gemma-4-12B__en-de-es-ro-ru__ft200k__4000__20260811-112351__fewshot__20260813-140002",
+  "meta": {
+    "dataset": "en_c4200_eval5k",
+    "source": "decoder-probability-thresh/outputs/en_c4200_eval5k__gemma-4-12B__en-de-es-ro-ru__ft200k__4000__20260811-112351__fewshot__20260813-140002/data.json",
+    "threshold": 0.532,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 62.92%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7274052478134111,
+    "recall": 0.40854199358668214,
+    "f1": 0.5232207610642666,
+    "f0.5": 0.6291898707575918,
+    "tp": 11976,
+    "fp": 4488,
+    "fn": 17338,
+    "tn": 93177
+  },
+  "coverage": {
+    "scored_units": 5000,
+    "total_units": 5000,
+    "scored_tokens": 126979,
+    "total_tokens": 126979,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.40854199358668214,
+      "hits": 11976,
+      "support": 29314
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "language": "swedish",
+  "repo": "HuggingFaceFW/fineweb-2",
+  "revision": "af9c13333eb981300149d5ca60a8e9d659b276b9",
+  "prefix": "data/swe_Latn/train/",
+  "n_shards_total": 20,
+  "shards_sampled": [
+    "data/swe_Latn/train/000_00000.parquet",
+    "data/swe_Latn/train/000_00001.parquet",
+    "data/swe_Latn/train/000_00002.parquet",
+    "data/swe_Latn/train/000_00003.parquet",
+    "data/swe_Latn/train/001_00001.parquet",
+    "data/swe_Latn/train/001_00002.parquet",
+    "data/swe_Latn/train/001_00003.parquet",
+    "data/swe_Latn/train/002_00000.parquet",
+    "data/swe_Latn/train/002_00002.parquet",
+    "data/swe_Latn/train/002_00003.parquet",
+    "data/swe_Latn/train/003_00000.parquet",
+    "data/swe_Latn/train/003_00001.parquet",
+    "data/swe_Latn/train/003_00003.parquet",
+    "data/swe_Latn/train/004_00000.parquet",
+    "data/swe_Latn/train/004_00001.parquet",
+    "data/swe_Latn/train/004_00002.parquet"
+  ],
+  "docs_per_shard": 9375,
+  "n_docs": 150000,
+  "n_chars": 547209270,
+  "doc_weighting": "uniform (minhash_cluster_size ignored)",
+  "selection": "deterministic stride: 16 shards x strided row groups",
+  "seconds": 373.8
+}

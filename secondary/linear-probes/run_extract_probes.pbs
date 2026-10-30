@@ -1,0 +1,48 @@
+#!/bin/bash
+#PBS -l walltime=03:00:00
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_type=RTX6000
+#PBS -N extract_probe
+#PBS -j oe
+
+# Extract one dataset per job. Example:
+#   qsub -v DATASET=english/en_c4200_train50k,MODEL=FacebookAI/xlm-roberta-base run_extract_probes.pbs
+
+set -eo pipefail
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+DATASET="${DATASET:?set DATASET, for example english/en_c4200_train50k}"
+MODEL="${MODEL:-jhu-clsp/mmBERT-base}"
+BATCH_SIZE="${BATCH_SIZE:-32}"
+
+LP="$PROJECT_ROOT/secondary/linear-probes"
+SYNTH="$PROJECT_ROOT/datasets/synthetic-data"
+MULTIGED="$PROJECT_ROOT/datasets/multiged-2023"
+
+if [ -f "$SYNTH/$DATASET.tsv" ]; then
+    DATA_PATH="$SYNTH/$DATASET.tsv"
+elif [ -f "$MULTIGED/$DATASET.tsv" ]; then
+    DATA_PATH="$MULTIGED/$DATASET.tsv"
+else
+    echo "dataset not found: $DATASET"
+    exit 1
+fi
+
+MODEL_NAME="${MODEL//\//__}"
+DATASET_NAME="${DATASET##*/}"
+FEATURE_DIR="$LP/features/$MODEL_NAME/$DATASET_NAME"
+
+echo "=== $(date) extracting $DATASET with $MODEL ==="
+python "$LP/linear-probe-feature-extraction.py" \
+    --data-path "$DATA_PATH" \
+    --output-dir "$FEATURE_DIR" \
+    --model-id "$MODEL" \
+    --batch-size "$BATCH_SIZE"
+
+echo "=== $(date) done; features in $FEATURE_DIR ==="
+du -sh "$FEATURE_DIR"

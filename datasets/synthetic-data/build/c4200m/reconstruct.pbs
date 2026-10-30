@@ -1,0 +1,65 @@
+#!/bin/bash
+#PBS -N c4200m_recon
+#PBS -l select=1:ncpus=32:mem=64gb
+#PBS -l walltime=48:00:00
+#PBS -j oe
+
+# Reconstruct the multilingual C4_200M datasets (de, es, ro, ru).
+#
+#   qsub reconstruct.pbs                    # everything (~2.6 TB, network bound)
+#   qsub -v MODE=head reconstruct.pbs       # dense region only (~67 GB, minutes)
+#   qsub -v MODE=tail reconstruct.pbs       # the long tail, after a head run
+#   qsub -v LANGS=ro,de reconstruct.pbs     # subset of languages
+#
+# Re-running is safe and is how you resume: completed shards are skipped, so a
+# job that hits walltime just needs resubmitting.
+
+set -euo pipefail
+
+# Submit from the repository root: qsub datasets/synthetic-data/build/c4200m/reconstruct.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+HERE=$PROJECT_ROOT/datasets/synthetic-data/build/c4200m
+BASE=$PROJECT_ROOT/datasets/synthetic-data/sources
+
+MODE=${MODE:-all}
+LANGS=${LANGS:-de,es,ro,ru}
+WORKERS=${WORKERS:-32}
+
+WORK=$BASE/work
+SHARDS=$BASE/shards
+OUT=$BASE/c4200m_multilingual
+
+cd "$HERE"
+
+# Module init scripts are not -u clean, and the venv is unusable without the
+# module: it links against the module's libpython3.12.so.
+set +u
+source /etc/profile.d/modules.sh
+module load SciPy-bundle/2024.05-gfbf-2024a
+set -u
+PY="${PY:-$PROJECT_ROOT/.venv-data/bin/python}"
+"$PY" -c "import numpy, orjson, absl" || { echo "env broken"; exit 1; }
+
+# HF is reachable unauthenticated, but a token lifts the rate limits that a
+# sustained multi-TB pull would otherwise hit.
+if [ -f "$PROJECT_ROOT/.env" ]; then
+    set +u; . "$PROJECT_ROOT/.env"; set -u
+    export HF_TOKEN
+fi
+
+echo "=== $(date) mode=$MODE langs=$LANGS workers=$WORKERS host=$(hostname) ==="
+
+if [ ! -d "$WORK/hashes" ]; then
+    echo "--- preparing hash sets ---"
+    "$PY" prepare_hashes.py --out "$WORK" --langs "$LANGS"
+fi
+
+echo "--- phase 1: scanning shards ---"
+"$PY" scan.py --work "$WORK" --out "$SHARDS" --langs "$LANGS" \
+      --workers "$WORKERS" --mode "$MODE"
+
+echo "--- phase 2: merge and apply edits ---"
+"$PY" merge.py --work "$WORK" --shards "$SHARDS" --out "$OUT" --langs "$LANGS"
+
+echo "=== $(date) complete ==="
+du -sh "$OUT"/targets "$OUT"/pairs

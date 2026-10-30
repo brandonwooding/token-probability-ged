@@ -1,0 +1,197 @@
+{
+  "0": {
+    "layer": 0,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.02141280353200883,
+    "metrics": {
+      "accuracy": 0.828627882820615,
+      "precision": 0.5672514619883041,
+      "recall": 0.0044159155057816625,
+      "f1": 0.008763608438361116,
+      "f0.5": 0.02141280353200883
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_00.pt"
+  },
+  "1": {
+    "layer": 1,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.06462838677603779,
+    "metrics": {
+      "accuracy": 0.8290808556500551,
+      "precision": 0.574585635359116,
+      "recall": 0.014203769461895657,
+      "f1": 0.02772224443555911,
+      "f0.5": 0.06462838677603779
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_01.pt"
+  },
+  "2": {
+    "layer": 2,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.19958903186687327,
+    "metrics": {
+      "accuracy": 0.8318846012667619,
+      "precision": 0.6139896373056994,
+      "recall": 0.05394700901393062,
+      "f1": 0.09917977904251758,
+      "f0.5": 0.19958903186687327
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_02.pt"
+  },
+  "3": {
+    "layer": 3,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.34739884393063586,
+    "metrics": {
+      "accuracy": 0.8338292604828066,
+      "precision": 0.5647434692726931,
+      "recall": 0.1368023308749886,
+      "f1": 0.22025140176640892,
+      "f0.5": 0.34739884393063586
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_03.pt"
+  },
+  "4": {
+    "layer": 4,
+    "epoch": 4,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.41306966472595863,
+    "metrics": {
+      "accuracy": 0.8383589887772076,
+      "precision": 0.5911506967389742,
+      "recall": 0.18733497222980972,
+      "f1": 0.2845092819856881,
+      "f0.5": 0.41306966472595863
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_04.pt"
+  },
+  "5": {
+    "layer": 5,
+    "epoch": 5,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4378921201120625,
+    "metrics": {
+      "accuracy": 0.8417094257397906,
+      "precision": 0.6182451253481894,
+      "recall": 0.2020850405171629,
+      "f1": 0.30460440540726,
+      "f0.5": 0.4378921201120625
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_05.pt"
+  },
+  "6": {
+    "layer": 6,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.4857583295378902,
+    "metrics": {
+      "accuracy": 0.84650468983076,
+      "precision": 0.6316628701594533,
+      "recall": 0.2524811071656196,
+      "f1": 0.36076237559357316,
+      "f0.5": 0.4857583295378902
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_06.pt"
+  },
+  "7": {
+    "layer": 7,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5246340806369542,
+    "metrics": {
+      "accuracy": 0.8503861983864796,
+      "precision": 0.6252563988227949,
+      "recall": 0.31917508877355916,
+      "f1": 0.4226167153922662,
+      "f0.5": 0.5246340806369542
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_07.pt"
+  },
+  "8": {
+    "layer": 8,
+    "epoch": 6,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5346295900613535,
+    "metrics": {
+      "accuracy": 0.8528384995665519,
+      "precision": 0.6434015979428781,
+      "recall": 0.31894746426295184,
+      "f1": 0.42647998782529295,
+      "f0.5": 0.5346295900613535
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_08.pt"
+  },
+  "9": {
+    "layer": 9,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5402414190006788,
+    "metrics": {
+      "accuracy": 0.8533930007887975,
+      "precision": 0.6394759825327511,
+      "recall": 0.3333333333333333,
+      "f1": 0.43823318170936076,
+      "f0.5": 0.5402414190006788
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_09.pt"
+  },
+  "10": {
+    "layer": 10,
+    "epoch": 12,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5372448289847236,
+    "metrics": {
+      "accuracy": 0.8510578477542701,
+      "precision": 0.6113375894161988,
+      "recall": 0.36183192206136755,
+      "f1": 0.45460005147710697,
+      "f0.5": 0.5372448289847236
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_10.pt"
+  },
+  "11": {
+    "layer": 11,
+    "epoch": 11,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5258029428649122,
+    "metrics": {
+      "accuracy": 0.8508235514631803,
+      "precision": 0.6295559374152121,
+      "recall": 0.3168988436674861,
+      "f1": 0.42158495593979955,
+      "f0.5": 0.5258029428649122
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_11.pt"
+  },
+  "12": {
+    "layer": 12,
+    "epoch": 10,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.5174874503756685,
+    "metrics": {
+      "accuracy": 0.8508626008450286,
+      "precision": 0.6472096840377514,
+      "recall": 0.2872166074842939,
+      "f1": 0.3978684492653087,
+      "f0.5": 0.5174874503756685
+    },
+    "probe_path": "secondary/linear-probes/experiments/FacebookAI__xlm-roberta-base/en_c4200/probe_layer_12.pt"
+  }
+}

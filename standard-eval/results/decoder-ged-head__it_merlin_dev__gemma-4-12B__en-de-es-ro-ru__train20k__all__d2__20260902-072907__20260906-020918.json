@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020918",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "finetuning/decoder_ged/outputs/it_merlin_dev__gemma-4-12B__en-de-es-ro-ru__train20k__all__d2__20260902-072907__20260906-020918/data.json",
+    "threshold": 0.635,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 63.15%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7304860088365243,
+    "recall": 0.40957886044591246,
+    "f1": 0.5248677248677248,
+    "f0.5": 0.6315253374076903,
+    "tp": 496,
+    "fp": 183,
+    "fn": 715,
+    "tn": 7750
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.40957886044591246,
+      "hits": 496,
+      "support": 1211
+    }
+  }
+}

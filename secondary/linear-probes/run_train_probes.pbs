@@ -1,0 +1,70 @@
+#!/bin/bash
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=4:mem=64gb:ngpus=1:gpu_type=RTX6000
+#PBS -N train_probe
+#PBS -j oe
+
+# Train and evaluate one probe experiment from separately extracted datasets.
+# Example:
+#   qsub -v TRAIN_DATASET=english/en_c4200_train50k,VAL_DATASET=english/en_c4200_val5k,EVAL_DATASET=english/en_fce_dev,MODEL=FacebookAI/xlm-roberta-base run_train_probes.pbs
+
+set -eo pipefail
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+TRAIN_DATASET="${TRAIN_DATASET:?set TRAIN_DATASET}"
+VAL_DATASET="${VAL_DATASET:?set VAL_DATASET}"
+EVAL_DATASET="${EVAL_DATASET:?set EVAL_DATASET}"
+MODEL="${MODEL:-jhu-clsp/mmBERT-base}"
+HEAD="${HEAD:-linear}"
+
+case "$HEAD" in
+    linear) HEAD_SUFFIX="" ;;
+    mlp)    HEAD_SUFFIX="_mlp" ;;
+    *)      echo "unknown HEAD '$HEAD' (expected linear or mlp)"; exit 1 ;;
+esac
+
+LP="$PROJECT_ROOT/secondary/linear-probes"
+MODEL_NAME="${MODEL//\//__}"
+TRAIN_NAME="${TRAIN_DATASET##*/}"
+VAL_NAME="${VAL_DATASET##*/}"
+EVAL_NAME="${EVAL_DATASET##*/}"
+RUN_NAME="${RUN_NAME:-${TRAIN_NAME%_train*}}"
+TAG="${RUN_NAME}__${MODEL_NAME}${HEAD_SUFFIX}"
+
+FEATURE_ROOT="$LP/features/$MODEL_NAME"
+TRAIN_FEATURES="$FEATURE_ROOT/$TRAIN_NAME"
+VAL_FEATURES="$FEATURE_ROOT/$VAL_NAME"
+EVAL_FEATURES="$FEATURE_ROOT/$EVAL_NAME"
+EXPERIMENT="$LP/experiments/$MODEL_NAME/${RUN_NAME}${HEAD_SUFFIX}"
+
+for path in "$TRAIN_FEATURES" "$VAL_FEATURES" "$EVAL_FEATURES"; do
+    [ -f "$path/metadata.pt" ] || { echo "missing features: $path"; exit 1; }
+done
+
+echo "=== $(date) training $TAG ==="
+python "$LP/linear-probe-predictor.py" \
+    --train-dir "$TRAIN_FEATURES" \
+    --dev-dir "$VAL_FEATURES" \
+    --experiment-dir "$EXPERIMENT" \
+    --selection-metric f0.5 \
+    --head "$HEAD"
+
+mkdir -p "$LP/output"
+python "$LP/linear-probe-eval.py" \
+    --probe-dir "$EXPERIMENT" \
+    --features-dir "$EVAL_FEATURES" \
+    --output-path "$LP/output/${TAG}_${EVAL_NAME}.csv"
+
+python "$PROJECT_ROOT/standard-eval/adapt_linear_probes.py" \
+    --dataset "$EVAL_DATASET" \
+    --probe-dir "$EXPERIMENT" \
+    --feature-dir "$EVAL_FEATURES" \
+    --tag "$TAG"
+
+echo "=== $(date) done ==="

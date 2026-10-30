@@ -1,0 +1,425 @@
+{
+  "kind": "encoder-ged-family-e",
+  "variant": "e1a",
+  "base_model": "jhu-clsp/mmBERT-base",
+  "run_name": "mmBERT-base__en-de-it-sv__mlcheck__train20k__all__e1a__20260908-181044",
+  "languages": [
+    "en",
+    "de",
+    "it",
+    "sv"
+  ],
+  "corpus": "mlcheck",
+  "train_split": "train20k",
+  "val_split": "val5k",
+  "max_per_lang": null,
+  "n_train": 79999,
+  "n_val": 800,
+  "weights": {
+    "slot": 0.5,
+    "ul": 0.0,
+    "keep": 0.0,
+    "mlm": 1.0
+  },
+  "margin": 1.0,
+  "mlm_rate": 0.15,
+  "frozen_parameters": [
+    "input_embeddings.weight",
+    "output_projection.weight",
+    "output_projection.bias"
+  ],
+  "parameters": {
+    "trainable": 110922240,
+    "total": 307786240,
+    "trainable_fraction": 0.36038726097696894
+  },
+  "slot_rule": "first divergence index of the source and target sub-token sequences; single-position mask; replacement edits only",
+  "word_probability": "minimum probability across sub-tokens",
+  "normalisation": "sub-tokens->word; words->edit; edits->example; examples->batch; keep is a flat mean over c words",
+  "keep_rule": "plain mean over all c words (no before/after split)",
+  "batching": "sentence is the unit; greedy budget over rows x padded width; every content sub-token masked once per sentence",
+  "gradient_checkpointing": true,
+  "selection": "per-language thresholds, maximum pooled micro incorrect-class F0.5",
+  "primary_metric": "held-out multilingual token F0.5",
+  "best_step": 0,
+  "best_pooled_micro_f0.5": 0.3041712077677598,
+  "steps": 1073,
+  "epochs_completed": 1,
+  "tallies": {
+    "slot_pairs_1:1": 57354,
+    "slot_pairs_n:m": 30804,
+    "slot_skipped_empty_side": 0,
+    "slot_skipped_strict_prefix": 1127
+  },
+  "optimizer": {
+    "lr": 1e-05,
+    "token_budget": 16384,
+    "grad_accum": 6,
+    "warmup_ratio": 0.06,
+    "max_length": 192
+  },
+  "seed": 0,
+  "history": [
+    {
+      "pooled_micro": {
+        "precision": 0.28731867103416003,
+        "recall": 0.39741100323624595,
+        "f0.5": 0.3041712077677598,
+        "tp": 614,
+        "fp": 1523,
+        "fn": 931
+      },
+      "per_language": {
+        "de": {
+          "threshold": 0.005328349070623517,
+          "precision": 0.23586744639376217,
+          "recall": 0.44649446494464945,
+          "f0.5": 0.26043908738699956,
+          "tp": 121,
+          "fp": 392,
+          "fn": 150,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 1.2698684486167622e-06,
+          "precision": 0.30434782608695654,
+          "recall": 0.08433734939759036,
+          "f0.5": 0.2,
+          "tp": 14,
+          "fp": 32,
+          "fn": 152,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 0.009574188850820065,
+          "precision": 0.35125,
+          "recall": 0.41021897810218977,
+          "f0.5": 0.36164736164736166,
+          "tp": 281,
+          "fp": 519,
+          "fn": 404,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 0.030958439223468304,
+          "precision": 0.2544987146529563,
+          "recall": 0.46808510638297873,
+          "f0.5": 0.28005657708628007,
+          "tp": 198,
+          "fp": 580,
+          "fn": 225,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.5177868485157437,
+        "error": 0.25850009854499434
+      },
+      "separation": 0.2592867499707494,
+      "step": 0,
+      "epoch": 0.0
+    },
+    {
+      "pooled_micro": {
+        "precision": 0.20437262357414449,
+        "recall": 0.2783171521035599,
+        "f0.5": 0.21584178295351875,
+        "tp": 430,
+        "fp": 1674,
+        "fn": 1115
+      },
+      "per_language": {
+        "de": {
+          "threshold": 7.681712304474786e-05,
+          "precision": 0.1962025316455696,
+          "recall": 0.22878228782287824,
+          "f0.5": 0.20195439739413681,
+          "tp": 62,
+          "fp": 254,
+          "fn": 209,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 6.394158481271006e-05,
+          "precision": 0.14798206278026907,
+          "recall": 0.19879518072289157,
+          "f0.5": 0.1559546313799622,
+          "tp": 33,
+          "fp": 190,
+          "fn": 133,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 6.122754348325543e-05,
+          "precision": 0.2453416149068323,
+          "recall": 0.23065693430656933,
+          "f0.5": 0.24225697638761112,
+          "tp": 158,
+          "fp": 486,
+          "fn": 527,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 0.00030930788489058614,
+          "precision": 0.19218241042345277,
+          "recall": 0.41843971631205673,
+          "f0.5": 0.21548575602629655,
+          "tp": 177,
+          "fp": 744,
+          "fn": 246,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.04682543156211133,
+        "error": 0.013547540900041063
+      },
+      "separation": 0.033277890662070264,
+      "step": 250,
+      "epoch": 0.23299161230195714
+    },
+    {
+      "pooled_micro": {
+        "precision": 0.18312559923298177,
+        "recall": 0.24724919093851133,
+        "f0.5": 0.19314389725958137,
+        "tp": 382,
+        "fp": 1704,
+        "fn": 1163
+      },
+      "per_language": {
+        "de": {
+          "threshold": 2.1145434402569663e-05,
+          "precision": 0.1602787456445993,
+          "recall": 0.16974169741697417,
+          "f0.5": 0.16208597603946442,
+          "tp": 46,
+          "fp": 241,
+          "fn": 225,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 1.4888018540659687e-05,
+          "precision": 0.1553398058252427,
+          "recall": 0.1927710843373494,
+          "f0.5": 0.1616161616161616,
+          "tp": 32,
+          "fp": 174,
+          "fn": 134,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 1.221736783918459e-05,
+          "precision": 0.25462962962962965,
+          "recall": 0.16058394160583941,
+          "f0.5": 0.2279320348114381,
+          "tp": 110,
+          "fp": 322,
+          "fn": 575,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 7.79241781856399e-05,
+          "precision": 0.16709732988802756,
+          "recall": 0.458628841607565,
+          "f0.5": 0.19143477402802447,
+          "tp": 194,
+          "fp": 967,
+          "fn": 229,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.027580844843818248,
+        "error": 0.0072853101498528295
+      },
+      "separation": 0.020295534693965417,
+      "step": 500,
+      "epoch": 0.4659832246039143
+    },
+    {
+      "pooled_micro": {
+        "precision": 0.18232044198895028,
+        "recall": 0.341747572815534,
+        "f0.5": 0.20108157513900524,
+        "tp": 528,
+        "fp": 2368,
+        "fn": 1017
+      },
+      "per_language": {
+        "de": {
+          "threshold": 2.048794885922689e-05,
+          "precision": 0.16507936507936508,
+          "recall": 0.1918819188191882,
+          "f0.5": 0.1698236446766819,
+          "tp": 52,
+          "fp": 263,
+          "fn": 219,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 8.700076250534039e-06,
+          "precision": 0.18,
+          "recall": 0.16265060240963855,
+          "f0.5": 0.1762402088772846,
+          "tp": 27,
+          "fp": 123,
+          "fn": 139,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 2.340061473660171e-05,
+          "precision": 0.2051009564293305,
+          "recall": 0.28175182481751826,
+          "f0.5": 0.21690267475837266,
+          "tp": 193,
+          "fp": 748,
+          "fn": 492,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 9.839246922638267e-05,
+          "precision": 0.17181208053691274,
+          "recall": 0.6052009456264775,
+          "f0.5": 0.200532664891117,
+          "tp": 256,
+          "fp": 1234,
+          "fn": 167,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.023172696018313302,
+        "error": 0.007293708129281713
+      },
+      "separation": 0.01587898788903159,
+      "step": 750,
+      "epoch": 0.6989748369058714
+    },
+    {
+      "pooled_micro": {
+        "precision": 0.20359281437125748,
+        "recall": 0.286084142394822,
+        "f0.5": 0.21605240003910453,
+        "tp": 442,
+        "fp": 1729,
+        "fn": 1103
+      },
+      "per_language": {
+        "de": {
+          "threshold": 2.4275748728541657e-05,
+          "precision": 0.19642857142857142,
+          "recall": 0.2029520295202952,
+          "f0.5": 0.1976994967649173,
+          "tp": 55,
+          "fp": 225,
+          "fn": 216,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 9.164423317997716e-06,
+          "precision": 0.23140495867768596,
+          "recall": 0.1686746987951807,
+          "f0.5": 0.2153846153846154,
+          "tp": 28,
+          "fp": 93,
+          "fn": 138,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 2.494036016287282e-05,
+          "precision": 0.22053231939163498,
+          "recall": 0.25401459854014596,
+          "f0.5": 0.226503514709711,
+          "tp": 174,
+          "fp": 615,
+          "fn": 511,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 5.287043495627586e-05,
+          "precision": 0.18858307849133538,
+          "recall": 0.4373522458628842,
+          "f0.5": 0.21279043018173452,
+          "tp": 185,
+          "fp": 796,
+          "fn": 238,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.02493135132827759,
+        "error": 0.00802280028092096
+      },
+      "separation": 0.01690855104735663,
+      "step": 1000,
+      "epoch": 0.9319664492078286
+    },
+    {
+      "pooled_micro": {
+        "precision": 0.190997186620819,
+        "recall": 0.39546925566343044,
+        "f0.5": 0.2130255909629733,
+        "tp": 611,
+        "fp": 2588,
+        "fn": 934
+      },
+      "per_language": {
+        "de": {
+          "threshold": 2.4387913072132505e-05,
+          "precision": 0.19463087248322147,
+          "recall": 0.2140221402214022,
+          "f0.5": 0.19822282980177716,
+          "tp": 58,
+          "fp": 240,
+          "fn": 213,
+          "n": 3322
+        },
+        "en": {
+          "threshold": 2.275317456224002e-06,
+          "precision": 0.30612244897959184,
+          "recall": 0.09036144578313253,
+          "f0.5": 0.20718232044198898,
+          "tp": 15,
+          "fp": 34,
+          "fn": 151,
+          "n": 3407
+        },
+        "it": {
+          "threshold": 5.709873585146852e-05,
+          "precision": 0.19738751814223512,
+          "recall": 0.3970802919708029,
+          "f0.5": 0.21946102953041793,
+          "tp": 272,
+          "fp": 1106,
+          "fn": 413,
+          "n": 4458
+        },
+        "sv": {
+          "threshold": 0.00011705864017130807,
+          "precision": 0.18046132971506107,
+          "recall": 0.6288416075650118,
+          "f0.5": 0.21047634119322678,
+          "tp": 266,
+          "fp": 1208,
+          "fn": 157,
+          "n": 3013
+        }
+      },
+      "selection": "per-language thresholds; pooled micro incorrect-class F0.5",
+      "probability_means": {
+        "correct": 0.024228024518201625,
+        "error": 0.0081364550380076
+      },
+      "separation": 0.016091569480194023,
+      "step": 1073,
+      "epoch": 1.0
+    }
+  ],
+  "timestamp": "20260908-181044"
+}

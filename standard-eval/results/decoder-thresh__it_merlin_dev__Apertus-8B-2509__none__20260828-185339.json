@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__Apertus-8B-2509__none__20260828-185339",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "decoder-probability-thresh/outputs/it_merlin_dev__Apertus-8B-2509__none__20260828-185339/data.json",
+    "threshold": 0.00010964781961431851,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 28.73%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.30847457627118646,
+    "recall": 0.2254335260115607,
+    "f1": 0.26049618320610685,
+    "f0.5": 0.28730793517154285,
+    "tp": 273,
+    "fp": 612,
+    "fn": 938,
+    "tn": 7321
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.2254335260115607,
+      "hits": 273,
+      "support": 1211
+    }
+  }
+}

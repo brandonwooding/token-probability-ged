@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "it_merlin_dev__gemma-4-12B-it__20260828-054552",
+  "meta": {
+    "dataset": "italian/it_merlin_dev",
+    "source": "GED-by-instruction/outputs/it_merlin_dev__gemma-4-12B-it__20260828-054552/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.670028818443804,
+    "recall": 0.38398018166804293,
+    "f1": 0.4881889763779528,
+    "f0.5": 0.5831452219714071,
+    "tp": 465,
+    "fp": 229,
+    "fn": 746,
+    "tn": 7704
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.38398018166804293,
+      "hits": 465,
+      "support": 1211
+    }
+  }
+}

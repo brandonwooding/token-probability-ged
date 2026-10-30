@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "cs_geccc_dev__tiny-aya-global__rep1__20260908-002933",
+  "meta": {
+    "dataset": "czech/cs_geccc_dev",
+    "source": "GED-by-instruction/outputs/cs_geccc_dev__tiny-aya-global__rep1__20260908-002933/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.29995896594173166,
+    "recall": 0.09093170792387113,
+    "f1": 0.13955708285605192,
+    "f0.5": 0.2054871535391016,
+    "tp": 731,
+    "fp": 1706,
+    "fn": 7308,
+    "tn": 22194
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.09093170792387113,
+      "hits": 731,
+      "support": 8039
+    }
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "0": {
+    "layer": 0,
+    "epoch": 14,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.006051270766861041,
+    "metrics": {
+      "accuracy": 0.9186864383735475,
+      "precision": 0.34375,
+      "recall": 0.0012275415690213146,
+      "f1": 0.0024463471589013675,
+      "f0.5": 0.006051270766861041
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_00.pt"
+  },
+  "1": {
+    "layer": 1,
+    "epoch": 10,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.023562172003855627,
+    "metrics": {
+      "accuracy": 0.9187226945597593,
+      "precision": 0.46808510638297873,
+      "recall": 0.0049101662760852585,
+      "f1": 0.009718387631143015,
+      "f0.5": 0.023562172003855627
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_01.pt"
+  },
+  "2": {
+    "layer": 2,
+    "epoch": 6,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.03184375331705764,
+    "metrics": {
+      "accuracy": 0.9188223990718416,
+      "precision": 0.5217391304347826,
+      "recall": 0.006695681285570807,
+      "f1": 0.013221683561040106,
+      "f0.5": 0.03184375331705764
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_02.pt"
+  },
+  "3": {
+    "layer": 3,
+    "epoch": 4,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.052268344666599006,
+    "metrics": {
+      "accuracy": 0.9186229900476769,
+      "precision": 0.4618834080717489,
+      "recall": 0.011494252873563218,
+      "f1": 0.022430313588850174,
+      "f0.5": 0.052268344666599006
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_03.pt"
+  },
+  "4": {
+    "layer": 4,
+    "epoch": 12,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.09575545529877544,
+    "metrics": {
+      "accuracy": 0.9182423000924532,
+      "precision": 0.4378947368421053,
+      "recall": 0.02321169512331213,
+      "f1": 0.04408647732089869,
+      "f0.5": 0.09575545529877544
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_04.pt"
+  },
+  "5": {
+    "layer": 5,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.11451398135818908,
+    "metrics": {
+      "accuracy": 0.9182332360459003,
+      "precision": 0.4479166666666667,
+      "recall": 0.02879142952795447,
+      "f1": 0.054105064485687325,
+      "f0.5": 0.11451398135818908
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_05.pt"
+  },
+  "6": {
+    "layer": 6,
+    "epoch": 14,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.18365905344949376,
+    "metrics": {
+      "accuracy": 0.9186955024201005,
+      "precision": 0.49523809523809526,
+      "recall": 0.05222631402745229,
+      "f1": 0.09448818897637795,
+      "f0.5": 0.18365905344949376
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_06.pt"
+  },
+  "7": {
+    "layer": 7,
+    "epoch": 11,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.2151517275211998,
+    "metrics": {
+      "accuracy": 0.9178797382303355,
+      "precision": 0.46269781461944237,
+      "recall": 0.06851913848900792,
+      "f1": 0.11936236391912908,
+      "f0.5": 0.2151517275211998
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_07.pt"
+  },
+  "8": {
+    "layer": 8,
+    "epoch": 7,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.25443129047027274,
+    "metrics": {
+      "accuracy": 0.9185414136287003,
+      "precision": 0.4917825537294564,
+      "recall": 0.0868206673362348,
+      "f1": 0.14758607606942994,
+      "f0.5": 0.25443129047027274
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_08.pt"
+  },
+  "9": {
+    "layer": 9,
+    "epoch": 19,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.2903322358575277,
+    "metrics": {
+      "accuracy": 0.9188133350252887,
+      "precision": 0.5010330578512396,
+      "recall": 0.10824684745006137,
+      "f1": 0.17803065063779022,
+      "f0.5": 0.2903322358575277
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_09.pt"
+  },
+  "10": {
+    "layer": 10,
+    "epoch": 9,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.2668511563550109,
+    "metrics": {
+      "accuracy": 0.9193753059115711,
+      "precision": 0.5212355212355212,
+      "recall": 0.09039169735520589,
+      "f1": 0.15406562054208273,
+      "f0.5": 0.2668511563550109
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_10.pt"
+  },
+  "11": {
+    "layer": 11,
+    "epoch": 12,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.2818513705835035,
+    "metrics": {
+      "accuracy": 0.9189764878632417,
+      "precision": 0.5061111111111111,
+      "recall": 0.10166276085258341,
+      "f1": 0.16931511941269398,
+      "f0.5": 0.2818513705835035
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_11.pt"
+  },
+  "12": {
+    "layer": 12,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3497127558703776,
+    "metrics": {
+      "accuracy": 0.9211881152221598,
+      "precision": 0.559322033898305,
+      "recall": 0.13993973886842986,
+      "f1": 0.2238686066232259,
+      "f0.5": 0.3497127558703776
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_12.pt"
+  },
+  "13": {
+    "layer": 13,
+    "epoch": 5,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.36528968563263187,
+    "metrics": {
+      "accuracy": 0.9209615140583362,
+      "precision": 0.5468689225982108,
+      "recall": 0.15690213145854257,
+      "f1": 0.24384321886923344,
+      "f0.5": 0.36528968563263187
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_13.pt"
+  },
+  "14": {
+    "layer": 14,
+    "epoch": 15,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.39543910722950026,
+    "metrics": {
+      "accuracy": 0.9167829885974295,
+      "precision": 0.4753252579632122,
+      "recall": 0.23646914406874234,
+      "f1": 0.31582085103211865,
+      "f0.5": 0.39543910722950026
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_14.pt"
+  },
+  "15": {
+    "layer": 15,
+    "epoch": 17,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.37852158858401974,
+    "metrics": {
+      "accuracy": 0.9220491996446893,
+      "precision": 0.5714851485148514,
+      "recall": 0.1610311349179779,
+      "f1": 0.2512624064078008,
+      "f0.5": 0.37852158858401974
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_15.pt"
+  },
+  "16": {
+    "layer": 16,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3800093317434807,
+    "metrics": {
+      "accuracy": 0.921949495132607,
+      "precision": 0.5677769171185127,
+      "recall": 0.1635978127441134,
+      "f1": 0.2540067573421121,
+      "f0.5": 0.3800093317434807
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_16.pt"
+  },
+  "17": {
+    "layer": 17,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3998134980766989,
+    "metrics": {
+      "accuracy": 0.9180700832079474,
+      "precision": 0.4907010014306152,
+      "recall": 0.2296618680950787,
+      "f1": 0.312884834663626,
+      "f0.5": 0.3998134980766989
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_17.pt"
+  },
+  "18": {
+    "layer": 18,
+    "epoch": 13,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3898621817332399,
+    "metrics": {
+      "accuracy": 0.920834617406595,
+      "precision": 0.5364834458373513,
+      "recall": 0.18625153442696127,
+      "f1": 0.27650762094102055,
+      "f0.5": 0.3898621817332399
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_18.pt"
+  },
+  "19": {
+    "layer": 19,
+    "epoch": 8,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.37681159420289856,
+    "metrics": {
+      "accuracy": 0.9213875242463245,
+      "precision": 0.5538116591928252,
+      "recall": 0.16538332775359893,
+      "f1": 0.25470482083011087,
+      "f0.5": 0.37681159420289856
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_19.pt"
+  },
+  "20": {
+    "layer": 20,
+    "epoch": 16,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.38400065571083153,
+    "metrics": {
+      "accuracy": 0.9177619056251473,
+      "precision": 0.4854922279792746,
+      "recall": 0.20912844548599488,
+      "f1": 0.2923328913501287,
+      "f0.5": 0.38400065571083153
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_20.pt"
+  },
+  "21": {
+    "layer": 21,
+    "epoch": 3,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3699243593120837,
+    "metrics": {
+      "accuracy": 0.9145079129126408,
+      "precision": 0.4465137406313877,
+      "recall": 0.21939515679053678,
+      "f1": 0.2942232864411853,
+      "f0.5": 0.3699243593120837
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_21.pt"
+  },
+  "22": {
+    "layer": 22,
+    "epoch": 4,
+    "decision_rule": "argmax",
+    "selection_metric": "f0.5",
+    "selection_score": 0.3329794136730962,
+    "metrics": {
+      "accuracy": 0.9211337309428421,
+      "precision": 0.565065065065065,
+      "recall": 0.125990402856824,
+      "f1": 0.2060406971439,
+      "f0.5": 0.3329794136730962
+    },
+    "probe_path": "secondary/linear-probes/experiments/jhu-clsp__mmBERT-base/de_c4200/probe_layer_22.pt"
+  }
+}

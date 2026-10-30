@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__mmBERT-base__20260828-235805",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "secondary/encoder-probability-thresh/outputs/en_realec_dev__mmBERT-base__20260828-235805/data.json",
+    "threshold": 0.0001,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 24.99%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.2900712377560107,
+    "recall": 0.16080464025669505,
+    "f1": 0.20690750297737198,
+    "f0.5": 0.2498945188140079,
+    "tp": 1303,
+    "fp": 3189,
+    "fn": 6800,
+    "tn": 76716
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.16080464025669505,
+      "hits": 1303,
+      "support": 8103
+    }
+  }
+}

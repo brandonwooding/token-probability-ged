@@ -1,0 +1,21 @@
+# Dataset-construction environment (C4_200M reconstruction, mERRANT build,
+# MLCheck conversion, Write & Improve build). Python 3.12.3. Kept separate from
+# the top-level requirements.txt because mERRANT's results depend on the exact
+# spaCy pipeline versions recorded in every .manifest.json.
+spacy==3.8.14
+errant==3.0.2
+numpy==1.26.4
+pandas==2.2.2
+pyarrow==25.0.0
+orjson==3.11.9
+absl-py==2.5.0
+datasets==5.0.0
+huggingface_hub==1.25.1
+
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+de-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.8.0/de_core_news_sm-3.8.0-py3-none-any.whl
+es-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl
+ro-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/ro_core_news_sm-3.8.0/ro_core_news_sm-3.8.0-py3-none-any.whl
+ru-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.8.0/ru_core_news_sm-3.8.0-py3-none-any.whl
+it-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/it_core_news_sm-3.8.0/it_core_news_sm-3.8.0-py3-none-any.whl
+sv-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/sv_core_news_sm-3.8.0/sv_core_news_sm-3.8.0-py3-none-any.whl

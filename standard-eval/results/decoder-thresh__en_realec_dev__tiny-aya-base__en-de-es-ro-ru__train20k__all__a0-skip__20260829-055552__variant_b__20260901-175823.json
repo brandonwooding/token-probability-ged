@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__tiny-aya-base__en-de-es-ro-ru__train20k__all__a0-skip__20260829-055552__variant_b__20260901-175823",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "decoder-probability-thresh/outputs/en_realec_dev__tiny-aya-base__en-de-es-ro-ru__train20k__all__a0-skip__20260829-055552__variant_b__20260901-175823/data.json",
+    "threshold": 0.252,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 50.17%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.6535359801488834,
+    "recall": 0.26002715043810937,
+    "f1": 0.37203142932815403,
+    "f0.5": 0.501690556693176,
+    "tp": 2107,
+    "fp": 1117,
+    "fn": 5996,
+    "tn": 78788
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.26002715043810937,
+      "hits": 2107,
+      "support": 8103
+    }
+  }
+}

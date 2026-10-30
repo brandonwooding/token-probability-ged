@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "cs_geccc_dev__Qwen3.5-9B-Base__variant_a__20260828-152458__tuned-on-en_c4200_eval5k",
+  "meta": {
+    "dataset": "cs_geccc_dev",
+    "source": "decoder-probability-thresh/outputs/cs_geccc_dev__Qwen3.5-9B-Base__variant_a__20260828-152458/data.json",
+    "threshold": 3.9810717055349695e-05,
+    "threshold_selection": "auto (max incorrect-class F0.5 = 34.37% on en_c4200_eval5k, held out from this scoring set)",
+    "tuned_on": "en_c4200_eval5k",
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.5128874388254486,
+    "recall": 0.19554670978977484,
+    "f1": 0.28314121037463974,
+    "f0.5": 0.38721119266958964,
+    "tp": 1572,
+    "fp": 1493,
+    "fn": 6467,
+    "tn": 22407
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.19554670978977484,
+      "hits": 1572,
+      "support": 8039
+    }
+  }
+}

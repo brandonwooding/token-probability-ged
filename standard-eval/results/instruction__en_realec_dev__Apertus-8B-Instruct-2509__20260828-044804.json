@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "en_realec_dev__Apertus-8B-Instruct-2509__20260828-044804",
+  "meta": {
+    "dataset": "english/en_realec_dev",
+    "source": "GED-by-instruction/outputs/en_realec_dev__Apertus-8B-Instruct-2509__20260828-044804/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.40794979079497906,
+    "recall": 0.07219548315438726,
+    "f1": 0.12268008807801194,
+    "f0.5": 0.21135920225449814,
+    "tp": 585,
+    "fp": 849,
+    "fn": 7518,
+    "tn": 79056
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.07219548315438726,
+      "hits": 585,
+      "support": 8103
+    }
+  }
+}

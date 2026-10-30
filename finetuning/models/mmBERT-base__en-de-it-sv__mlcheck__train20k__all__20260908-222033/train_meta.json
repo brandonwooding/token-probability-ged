@@ -1,0 +1,64 @@
+{
+  "kind": "ft-encoder",
+  "base_model": "jhu-clsp/mmBERT-base",
+  "model_id": "mmBERT-base",
+  "run_name": "mmBERT-base__en-de-it-sv__mlcheck__train20k__all__20260908-222033",
+  "languages": [
+    "en",
+    "de",
+    "it",
+    "sv"
+  ],
+  "corpus": "mlcheck",
+  "train_split": "train20k",
+  "val_split": "val5k",
+  "max_per_lang": null,
+  "n_train": 80000,
+  "n_val": 4000,
+  "epochs": 1,
+  "batch_size": 32,
+  "lr": 3e-05,
+  "max_length": 192,
+  "seed": 0,
+  "total_steps": 2500,
+  "best_step": 2500,
+  "best_val_f0.5": 0.6473042977743669,
+  "history": [
+    {
+      "step": 500,
+      "val_loss": 0.24297913849353792,
+      "precision": 0.7461059190031153,
+      "recall": 0.26895002807411567,
+      "f0.5": 0.5507013106461256
+    },
+    {
+      "step": 1000,
+      "val_loss": 0.22921783542633056,
+      "precision": 0.7847317744154058,
+      "recall": 0.3203256597417181,
+      "f0.5": 0.6083386649605459
+    },
+    {
+      "step": 1500,
+      "val_loss": 0.22452272176742555,
+      "precision": 0.7108792846497765,
+      "recall": 0.4017405951712521,
+      "f0.5": 0.6160668159118305
+    },
+    {
+      "step": 2000,
+      "val_loss": 0.2169186658859253,
+      "precision": 0.7780367025924847,
+      "recall": 0.3749298147108366,
+      "f0.5": 0.640343306482547
+    },
+    {
+      "step": 2500,
+      "val_loss": 0.21480641973018647,
+      "precision": 0.7866511221218304,
+      "recall": 0.37886019090398654,
+      "f0.5": 0.6473042977743669
+    }
+  ],
+  "timestamp": "20260908-222033"
+}

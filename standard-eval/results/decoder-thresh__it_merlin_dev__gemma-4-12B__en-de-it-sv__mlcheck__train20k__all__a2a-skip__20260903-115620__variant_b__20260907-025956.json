@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__variant_b__20260907-025956",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__en-de-it-sv__mlcheck__train20k__all__a2a-skip__20260903-115620__variant_b__20260907-025956/data.json",
+    "threshold": 0.046,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 71.84%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.8399390243902439,
+    "recall": 0.4549958711808423,
+    "f1": 0.5902517407605785,
+    "f0.5": 0.7183833116036508,
+    "tp": 551,
+    "fp": 105,
+    "fn": 660,
+    "tn": 7828
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.4549958711808423,
+      "hits": 551,
+      "support": 1211
+    }
+  }
+}

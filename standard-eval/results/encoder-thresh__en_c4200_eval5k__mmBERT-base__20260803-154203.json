@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_c4200_eval5k__mmBERT-base__20260803-154203",
+  "meta": {
+    "dataset": "en_c4200_eval5k",
+    "source": "secondary/encoder-probability-thresh/outputs/en_c4200_eval5k__mmBERT-base__20260803-154203/data.json",
+    "threshold": 0.001445439770745928,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 44.03%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.44559360648030955,
+    "recall": 0.42034522753633075,
+    "f1": 0.4326013305949058,
+    "f0.5": 0.44030416077069306,
+    "tp": 12322,
+    "fp": 15331,
+    "fn": 16992,
+    "tn": 82334
+  },
+  "coverage": {
+    "scored_units": 5000,
+    "total_units": 5000,
+    "scored_tokens": 126979,
+    "total_tokens": 126979,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.42034522753633075,
+      "hits": 12322,
+      "support": 29314
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "en_realec_dev__Qwen3.5-9B-Base__en-de-it-sv__mlcheck__train20k__all__d2__20260905-195353__20260907-152738",
+  "meta": {
+    "dataset": "en_realec_dev",
+    "source": "finetuning/decoder_ged/outputs/en_realec_dev__Qwen3.5-9B-Base__en-de-it-sv__mlcheck__train20k__all__d2__20260905-195353__20260907-152738/data.json",
+    "threshold": 0.147,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 53.09%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7151535605804927,
+    "recall": 0.26150808342589166,
+    "f1": 0.38297487800469904,
+    "f0.5": 0.5309446254071661,
+    "tp": 2119,
+    "fp": 844,
+    "fn": 5984,
+    "tn": 79061
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.26150808342589166,
+      "hits": 2119,
+      "support": 8103
+    }
+  }
+}

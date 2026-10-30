@@ -1,0 +1,46 @@
+#!/bin/bash
+# Encoder token-classifier fine-tune. Cheap: ~110M non-embedding params, so a
+# 1M-sentence epoch is roughly 30-60 min wall on one L40S. 8h leaves room for
+# the full multilingual set plus several epochs.
+#PBS -l walltime=08:00:00
+#PBS -l select=1:ncpus=4:mem=64gb:ngpus=1:gpu_type=RTX6000
+#PBS -N train_ft_encoder
+#PBS -j oe
+mkdir -p ~/logs
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+MODEL="${MODEL:-jhu-clsp/mmBERT-base}"
+CORPUS="${CORPUS:-c4200}"
+# `qsub -v` splits on commas, so join multi-language sets with '+' instead.
+LANGS="${LANGS:-en,de,es,ro,ru}"
+LANGS="${LANGS//+/,}"
+NAME="${NAME:-train20k}"
+VAL_NAME="${VAL_NAME:-val5k}"
+# Per-language cap. Truncation is nested, so a scaling curve is just this flag
+# taking a series of values against the same cut data.
+MAX_PER_LANG="${MAX_PER_LANG:-all}"
+EPOCHS="${EPOCHS:-1}"
+BATCH_SIZE="${BATCH_SIZE:-32}"
+EXTRA="${EXTRA:-}"
+MAX_ARG=()
+if [[ "$MAX_PER_LANG" != "all" ]]; then MAX_ARG=(--max-per-lang "$MAX_PER_LANG"); fi
+
+echo "model=$MODEL corpus=$CORPUS langs=$LANGS split=$NAME val=$VAL_NAME"
+python "$PROJECT_ROOT/finetuning/train_encoder.py" \
+    --model "$MODEL" \
+    --langs "$LANGS" \
+    --corpus "$CORPUS" \
+    --name "$NAME" \
+    --val-name "$VAL_NAME" \
+    "${MAX_ARG[@]}" \
+    --epochs "$EPOCHS" \
+    --batch-size "$BATCH_SIZE" \
+    $EXTRA

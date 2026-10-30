@@ -1,0 +1,42 @@
+#!/bin/bash
+# Walltime is deliberately generous. On this cluster the job sort formula is
+# `fairshare_factor + 1000*priority_job` -- walltime is not a term, so asking for
+# more does not cost queue position, and a running job cannot be lengthened
+# (`qalter` needs manager privilege here). The binding case is en_realec_dev at
+# 4,067 sentences with Qwen3.5-9B, which is ~2.3x slower per sentence than
+# gemma-4-12B; FCE-dev's measured 39 min for gemma is not a safe basis to
+# extrapolate from. Overrunning costs the whole run, so the ceiling is high.
+#PBS -l walltime=12:00:00
+# A100 (40 GB): gemma-4-12B-it's 23 GB of weights do not fit a 24 GB RTX6000,
+# and RTX6000 is Turing (sm_75) where vLLM refuses bf16 outright. Every model
+# runs here so the comparison is not confounded by precision. Needs
+# MAX_MODEL_LEN in ged_inference.py -- gemma's advertised 262k context wants
+# 16 GB of KV, which does not fit the 13 GB left after weights.
+#PBS -l select=1:ncpus=4:mem=64gb:ngpus=1:gpu_type=A100
+#PBS -N run_ged
+#PBS -j oe
+mkdir -p ~/logs
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+export VLLM_USE_FLASHINFER_SAMPLER=0
+
+MODEL="${MODEL:-google/gemma-4-12B-it}"
+# Dataset id: '<language>/<stem>' or a bare stem (see paths.py). Override with
+#   qsub -v DATASET=german/de_falko-merlin_dev run_ged.pbs
+DATASET="${DATASET:-english/en_fce_dev}"
+# Optional run label, folded into the output folder name (naming only -- see
+# --tag in ged_inference.py). Set it when the same (dataset, model) is run more
+# than once concurrently, so second-resolution timestamps cannot collide:
+#   qsub -v MODEL=...,DATASET=...,TAG=rep2 run_ged.pbs
+TAG="${TAG:-}"
+
+python "$PROJECT_ROOT/GED-by-instruction/ged_inference.py" \
+    --dataset "$DATASET" --model "$MODEL" ${TAG:+--tag "$TAG"}

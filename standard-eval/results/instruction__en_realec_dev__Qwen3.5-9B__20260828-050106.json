@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "en_realec_dev__Qwen3.5-9B__20260828-050106",
+  "meta": {
+    "dataset": "english/en_realec_dev",
+    "source": "GED-by-instruction/outputs/en_realec_dev__Qwen3.5-9B__20260828-050106/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.42402826855123676,
+    "recall": 0.2073306182895224,
+    "f1": 0.2784915043514298,
+    "f0.5": 0.3507160452590706,
+    "tp": 1680,
+    "fp": 2282,
+    "fn": 6423,
+    "tn": 77623
+  },
+  "coverage": {
+    "scored_units": 4067,
+    "total_units": 4067,
+    "scored_tokens": 88008,
+    "total_tokens": 88008,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.2073306182895224,
+      "hits": 1680,
+      "support": 8103
+    }
+  }
+}

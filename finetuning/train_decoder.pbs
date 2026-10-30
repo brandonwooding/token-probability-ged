@@ -1,0 +1,38 @@
+#!/bin/bash
+# Decoder LoRA fine-tune. Roughly 50-100x the cost per example of the encoder:
+# a 12B forward+backward at ~100 subtokens per pair works out near 6-8h for
+# 100k pairs on one L40S with gradient checkpointing. Size MAX_PER_LANG to the
+# walltime -- 4000 x 5 languages is about 1-1.5h, a good first run.
+#PBS -l walltime=12:00:00
+#PBS -l select=1:ncpus=8:mem=96gb:ngpus=1:gpu_type=L40S
+#PBS -N train_ft_decoder
+#PBS -j oe
+mkdir -p ~/logs
+
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+MODEL="${MODEL:-google/gemma-4-12B}"
+LANGS="${LANGS:-en,de,es,ro,ru}"
+NAME="${NAME:-train10k}"
+MAX_PER_LANG="${MAX_PER_LANG:-4000}"
+EPOCHS="${EPOCHS:-1}"
+BATCH_SIZE="${BATCH_SIZE:-4}"
+GRAD_ACCUM="${GRAD_ACCUM:-8}"
+EXTRA="${EXTRA:-}"
+
+python "$PROJECT_ROOT/finetuning/train_decoder.py" \
+    --model "$MODEL" \
+    --langs "$LANGS" \
+    --name "$NAME" \
+    --max-per-lang "$MAX_PER_LANG" \
+    --epochs "$EPOCHS" \
+    --batch-size "$BATCH_SIZE" \
+    --grad-accum "$GRAD_ACCUM" \
+    $EXTRA

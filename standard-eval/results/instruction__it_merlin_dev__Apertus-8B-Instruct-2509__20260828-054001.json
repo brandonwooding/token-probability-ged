@@ -1,0 +1,33 @@
+{
+  "approach": "ged-by-instruction",
+  "tag": "it_merlin_dev__Apertus-8B-Instruct-2509__20260828-054001",
+  "meta": {
+    "dataset": "italian/it_merlin_dev",
+    "source": "GED-by-instruction/outputs/it_merlin_dev__Apertus-8B-Instruct-2509__20260828-054001/data.json",
+    "parse_failures_as_all_c": 0
+  },
+  "global": {
+    "precision": 0.4218009478672986,
+    "recall": 0.07349298100743187,
+    "f1": 0.12517580872011252,
+    "f0.5": 0.2165450121654501,
+    "tp": 89,
+    "fp": 122,
+    "fn": 1122,
+    "tn": 7811
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.07349298100743187,
+      "hits": 89,
+      "support": 1211
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__gemma-4-12B__variant_b__20260828-175838",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "decoder-probability-thresh/outputs/it_merlin_dev__gemma-4-12B__variant_b__20260828-175838/data.json",
+    "threshold": 0.215,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 39.64%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.45870206489675514,
+    "recall": 0.25681255161023947,
+    "f1": 0.3292747485442033,
+    "f0.5": 0.3963803211827683,
+    "tp": 311,
+    "fp": 367,
+    "fn": 900,
+    "tn": 7566
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.25681255161023947,
+      "hits": 311,
+      "support": 1211
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "cs_geccc_dev__tiny-aya-base__en-de-it-sv__mlcheck__train20k__all__a0-skip__20260903-150719__variant_b__20260906-232524",
+  "meta": {
+    "dataset": "cs_geccc_dev",
+    "source": "decoder-probability-thresh/outputs/cs_geccc_dev__tiny-aya-base__en-de-it-sv__mlcheck__train20k__all__a0-skip__20260903-150719__variant_b__20260906-232524/data.json",
+    "threshold": 0.403,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 70.54%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.7998338870431894,
+    "recall": 0.4791640751337231,
+    "f1": 0.5992998833138856,
+    "f0.5": 0.7054169871442699,
+    "tp": 3852,
+    "fp": 964,
+    "fn": 4187,
+    "tn": 22936
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.4791640751337231,
+      "hits": 3852,
+      "support": 8039
+    }
+  }
+}

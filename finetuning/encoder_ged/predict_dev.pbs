@@ -1,0 +1,27 @@
+#!/bin/bash
+# One GPU job scoring a Family-E run over several datasets. The model is loaded
+# once and reused, and a run folder is written per dataset as it finishes, so an
+# overrun costs only the in-flight dataset.
+#PBS -l walltime=08:00:00
+#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1:gpu_type=RTX6000
+#PBS -N encoder_ged_predict
+#PBS -j oe
+# Submit from the repository root: qsub <dir>/<script>.pbs
+PROJECT_ROOT="${PROJECT_ROOT:-${PBS_O_WORKDIR:-$(pwd)}}"
+cd "$PROJECT_ROOT"
+module load Python/3.12.3-GCCcore-13.3.0
+source "$PROJECT_ROOT/.venv/bin/activate"
+export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
+
+RUN="${RUN:?submit with RUN=/absolute/path/to/an/E-run}"
+MODEL_ID="${MODEL_ID:-}"
+ROW_BUDGET="${ROW_BUDGET:-256}"
+DATASET="${DATASET:-english/en_fce_dev english/en_realec_dev german/de_falko-merlin_dev czech/cs_geccc_dev italian/it_merlin_dev swedish/sv_swell_dev english/en_c4200_eval5k german/de_c4200_eval5k}"
+ID_ARG=()
+if [[ -n "$MODEL_ID" ]]; then ID_ARG=(--model-id "$MODEL_ID"); fi
+
+for DS in $DATASET; do
+  echo "=== $DS"
+  python "$PROJECT_ROOT/finetuning/encoder_ged/predict_mlm.py" \
+    --run "$RUN" --dataset "$DS" --row-budget "$ROW_BUDGET" "${ID_ARG[@]}"
+done

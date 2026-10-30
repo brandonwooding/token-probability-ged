@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "it_merlin_dev__xlm-roberta-base__20260829-000441",
+  "meta": {
+    "dataset": "it_merlin_dev",
+    "source": "secondary/encoder-probability-thresh/outputs/it_merlin_dev__xlm-roberta-base__20260829-000441/data.json",
+    "threshold": 0.0019054607179632462,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 32.90%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.3284193284193284,
+    "recall": 0.3311312964492155,
+    "f1": 0.32976973684210525,
+    "f0.5": 0.32895816242821985,
+    "tp": 401,
+    "fp": 820,
+    "fn": 810,
+    "tn": 7113
+  },
+  "coverage": {
+    "scored_units": 758,
+    "total_units": 758,
+    "scored_tokens": 9144,
+    "total_tokens": 9144,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.3311312964492155,
+      "hits": 401,
+      "support": 1211
+    }
+  }
+}

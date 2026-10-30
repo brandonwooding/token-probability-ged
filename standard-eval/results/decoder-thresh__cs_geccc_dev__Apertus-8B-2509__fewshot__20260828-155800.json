@@ -1,0 +1,38 @@
+{
+  "approach": "prob-threshold",
+  "tag": "cs_geccc_dev__Apertus-8B-2509__fewshot__20260828-155800",
+  "meta": {
+    "dataset": "cs_geccc_dev",
+    "source": "decoder-probability-thresh/outputs/cs_geccc_dev__Apertus-8B-2509__fewshot__20260828-155800/data.json",
+    "threshold": 0.586,
+    "threshold_selection": "auto (max incorrect-class F0.5 on dev = 49.92%; selected on the set it is scored on)",
+    "tuned_on": null,
+    "pooling": "min sub-token probability per word",
+    "skipped_units": 0,
+    "skipped_unit_ids": []
+  },
+  "global": {
+    "precision": 0.4910377897020208,
+    "recall": 0.5350167931334743,
+    "f1": 0.5120847719966662,
+    "f0.5": 0.4992455020313407,
+    "tp": 4301,
+    "fp": 4458,
+    "fn": 3738,
+    "tn": 19442
+  },
+  "coverage": {
+    "scored_units": 2780,
+    "total_units": 2780,
+    "scored_tokens": 31939,
+    "total_tokens": 31939,
+    "skipped_units": 0
+  },
+  "per_type_recall": {
+    "null": {
+      "recall": 0.5350167931334743,
+      "hits": 4301,
+      "support": 8039
+    }
+  }
+}
