@@ -1,0 +1,34 @@
+variant=a1-anchor corpus=c4200 langs=en,de,es,ro,ru split=train10k val=val5k model=google/gemma-4-12B
+huggingface_login=skipped token_env_missing
+loading prepared training data:
+  [en]  10000 canonical examples from en_c4200_train10k.jsonl
+  [de]  10000 canonical examples from de_c4200_train10k.jsonl
+  [es]  10000 canonical examples from es_c4200_train10k.jsonl
+  [ro]  10000 canonical examples from ro_c4200_train10k.jsonl
+  [ru]  10000 canonical examples from ru_c4200_train10k.jsonl
+loading prepared validation data:
+  [en]    200 canonical examples from en_c4200_val5k.jsonl
+  [de]    200 canonical examples from de_c4200_val5k.jsonl
+  [es]    200 canonical examples from es_c4200_val5k.jsonl
+  [ro]    200 canonical examples from ro_c4200_val5k.jsonl
+  [ru]    200 canonical examples from ru_c4200_val5k.jsonl
+  train: 49748 kept, 252 too long/unalignable
+  val: 994 kept, 6 too long/unalignable
+trainable params: 65,568,768 || all params: 12,025,298,944 || trainable%: 0.5453
+  step     0 pooled_micro_F0.5=29.94 correction_loss=0.6042 <- saved
+  step   250 pooled_micro_F0.5=41.96 correction_loss=0.4644 <- saved
+  step   500 pooled_micro_F0.5=35.42 correction_loss=0.8941
+  step   750 pooled_micro_F0.5=28.75 correction_loss=0.7458
+  step  1000 pooled_micro_F0.5=35.95 correction_loss=0.8448
+  step  1250 pooled_micro_F0.5=43.72 correction_loss=0.9170 <- saved
+  step  1500 pooled_micro_F0.5=38.56 correction_loss=0.6622
+  step  1555 pooled_micro_F0.5=34.20 correction_loss=0.4973
+adaptive stop: best checkpoint is not both improving and in final 10%
+best pooled micro F0.5=43.72 at step 1250 -> finetuning/decoder_ged/models/gemma-4-12B__en-de-es-ro-ru__c4200__train10k__all__a1-anchor-anchor-next__20261031-081805
+====================================
+CPU Time used: 08:19:56
+CPU Percent: 99%
+Memory usage: 27369548kb
+Approx Power usage: 0.0998
+Walltime usage: 08:26:35
+====================================

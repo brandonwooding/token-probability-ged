@@ -37,10 +37,13 @@ VARIANTS = {
     "a1a": {"contrast": .5, "unlikelihood": 0., "keep": 0.},
     "a1b": {"contrast": 1., "unlikelihood": 0., "keep": 0.},
     "a1-anchor": {"contrast": .5, "unlikelihood": 0., "keep": 0.},
+    "a2-ul": {"contrast": 0., "unlikelihood": .5, "keep": 0.},
+    "a2-keep": {"contrast": 0., "unlikelihood": 0., "keep": .5},
     "a2a": {"contrast": 0., "unlikelihood": .5, "keep": .5},
     "a2b": {"contrast": 0., "unlikelihood": 1., "keep": .5},
     "a3a": {"contrast": .5, "unlikelihood": .5, "keep": .5},
     "a3b": {"contrast": .5, "unlikelihood": 1., "keep": .5},
+    "a3-anchor": {"contrast": .5, "unlikelihood": .5, "keep": .5},
 }
 
 
@@ -121,7 +124,7 @@ def main():
     weights = VARIANTS[args.variant]
     has_auxiliary_loss = any(weight != 0. for weight in weights.values())
     empty_policy = args.empty_edit_contrast or (
-        "anchor-next" if args.variant == "a1-anchor" else "skip")
+        "anchor-next" if args.variant.endswith("-anchor") else "skip")
 
     runtime.seed_everything(args.seed)
     ft_data.hf_login()

@@ -12,8 +12,14 @@ pass shows the corrupted sentence in the same position and adds:
 |---|---:|---:|---:|
 | `a0` (correction only) | 0 | 0 | 0 |
 | `a1a` / `a1b` | 0.5 / 1.0 | 0 | 0 |
+| `a2-ul` | 0 | 0.5 | 0 |
+| `a2-keep` | 0 | 0 | 0.5 |
 | `a2a` / `a2b` | 0 | 0.5 / 1.0 | 0.5 |
 | `a3a` / `a3b` | 0.5 | 0.5 / 1.0 | 0.5 |
+
+Variants ending in `-anchor` (`a1-anchor`, `a3-anchor`) use anchored contrast:
+an edit with an empty side (pure insertion or deletion) is compared on the next
+word instead of being skipped.
 
 - **Contrast**: the error span should be less likely than its correction, by a margin of 1.
 - **Unlikelihood**: push down the probability of erroneous words, `-log(1 - P)`.
@@ -21,14 +27,34 @@ pass shows the corrupted sentence in the same position and adds:
 
 A word's probability is the minimum over its sub-tokens, as at inference. The
 paper's adapters are **`a2a`** (Correction + Unlikelihood + Preservation) on
-`train20k`, with `a0` as the correction-only baseline. The objective sweep in the
-paper's appendix used the older `ft200k__10000` runs of every variant.
+`train20k`, with `a0` as the correction-only baseline.
 
 ```bash
 python finetuning/decoder_ged/train_objectives.py --variant a2a \
     --model google/gemma-4-12B --corpus c4200 --langs en,de,es,ro,ru --name train20k
 # or: qsub -v VARIANT=a2a,CORPUS=c4200,NAME=train20k finetuning/decoder_ged/train_a.pbs
 ```
+
+The objective sweep trains Gemma 4 on `c4200` `train10k` and selects on `val5k`.
+Each run's `train_meta.json` and `train.log` are in
+`models/gemma-4-12B__en-de-es-ro-ru__c4200__train10k__all__*`. Best validation F0.5:
+
+| Variant | Losses | F0.5 |
+|---|---|---:|
+| `a0` | Correction | 61.36 |
+| `a1-anchor` | + Contrast | 43.72 |
+| `a2-ul` | + Unlikelihood | 50.04 |
+| `a2-keep` | + Preservation | 59.53 |
+| `a2a` | + Unlikelihood + Preservation | **72.18** |
+| `a3-anchor` | + Contrast + Unlikelihood + Preservation | 66.64 |
+
+```bash
+for v in a0 a1-anchor a2-ul a2-keep a2a a3-anchor; do
+  qsub -v VARIANT=$v,NAME=train10k finetuning/decoder_ged/train_a.pbs
+done
+```
+
+The older `ft200k__10000` runs are an earlier, less complete sweep.
 
 Score with the decoder probability script (`--adapter models/<run>`); see
 [`../README.md`](../README.md).

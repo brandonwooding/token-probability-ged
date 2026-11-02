@@ -1,0 +1,47 @@
+variant=a0 corpus=c4200 langs=en,de,es,ro,ru split=train10k val=val5k model=google/gemma-4-12B
+huggingface_login=skipped token_env_missing
+loading prepared training data:
+  [en]  10000 canonical examples from en_c4200_train10k.jsonl
+  [de]  10000 canonical examples from de_c4200_train10k.jsonl
+  [es]  10000 canonical examples from es_c4200_train10k.jsonl
+  [ro]  10000 canonical examples from ro_c4200_train10k.jsonl
+  [ru]  10000 canonical examples from ru_c4200_train10k.jsonl
+loading prepared validation data:
+  [en]    200 canonical examples from en_c4200_val5k.jsonl
+  [de]    200 canonical examples from de_c4200_val5k.jsonl
+  [es]    200 canonical examples from es_c4200_val5k.jsonl
+  [ro]    200 canonical examples from ro_c4200_val5k.jsonl
+  [ru]    200 canonical examples from ru_c4200_val5k.jsonl
+  train: 49748 kept, 252 too long/unalignable
+  val: 994 kept, 6 too long/unalignable
+trainable params: 65,568,768 || all params: 12,025,298,944 || trainable%: 0.5453
+  step     0 pooled_micro_F0.5=29.94 correction_loss=0.6042 <- saved
+  step   250 pooled_micro_F0.5=54.30 correction_loss=0.2089 <- saved
+  step   500 pooled_micro_F0.5=55.99 correction_loss=0.2039 <- saved
+  step   750 pooled_micro_F0.5=55.14 correction_loss=0.1999
+  step  1000 pooled_micro_F0.5=56.66 correction_loss=0.1967 <- saved
+  step  1250 pooled_micro_F0.5=57.84 correction_loss=0.1961 <- saved
+  step  1500 pooled_micro_F0.5=59.34 correction_loss=0.1922 <- saved
+  step  1555 pooled_micro_F0.5=56.17 correction_loss=0.1915
+  step  1750 pooled_micro_F0.5=58.35 correction_loss=0.2065
+  step  2000 pooled_micro_F0.5=57.04 correction_loss=0.2047
+  step  2250 pooled_micro_F0.5=57.20 correction_loss=0.2047
+  step  2500 pooled_micro_F0.5=57.93 correction_loss=0.2008
+  step  2750 pooled_micro_F0.5=59.09 correction_loss=0.2013
+  step  3000 pooled_micro_F0.5=59.80 correction_loss=0.2002 <- saved
+  step  3110 pooled_micro_F0.5=61.36 correction_loss=0.2007 <- saved
+  step  3250 pooled_micro_F0.5=60.47 correction_loss=0.2434
+  step  3500 pooled_micro_F0.5=60.66 correction_loss=0.2502
+  step  3750 pooled_micro_F0.5=60.18 correction_loss=0.2566
+  step  4000 pooled_micro_F0.5=60.99 correction_loss=0.2530
+  step  4250 pooled_micro_F0.5=60.28 correction_loss=0.2585
+  step  4500 pooled_micro_F0.5=60.09 correction_loss=0.2561
+  step  4665 pooled_micro_F0.5=60.03 correction_loss=0.2568
+best pooled micro F0.5=61.36 at step 3110 -> finetuning/decoder_ged/models/gemma-4-12B__en-de-es-ro-ru__c4200__train10k__all__a0-skip__20261031-015631
+====================================
+CPU Time used: 11:47:58
+CPU Percent: 99%
+Memory usage: 27336636kb
+Approx Power usage: 0.1414
+Walltime usage: 11:56:41
+====================================

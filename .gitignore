@@ -308,6 +308,7 @@ finetuning/decoder_ged/prepared/
 finetuning/*/models/**
 !finetuning/*/models/*/
 !finetuning/*/models/*/train_meta.json
+!finetuning/*/models/*/train.log
 
 # Heavy synthetic-data views.
 # Each split is written as five synchronized views from one build (see

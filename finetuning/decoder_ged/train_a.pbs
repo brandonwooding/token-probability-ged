@@ -9,7 +9,7 @@ cd "$PROJECT_ROOT"
 module load Python/3.12.3-GCCcore-13.3.0
 source "$PROJECT_ROOT/.venv/bin/activate"
 export CUDA_VISIBLE_DEVICES=$(nvidia-smi --query-gpu=index --format=csv,noheader | tr '\n' ',' | sed 's/,$//')
-VARIANT="${VARIANT:?submit with VARIANT=a0|a1a|a1b|a1-anchor|a2a|a2b|a3a|a3b}"
+VARIANT="${VARIANT:?submit with VARIANT=a0|a1a|a1b|a1-anchor|a2-ul|a2-keep|a2a|a2b|a3a|a3b|a3-anchor}"
 MODEL="${MODEL:-google/gemma-4-12B}"
 CORPUS="${CORPUS:-c4200}"
 # `qsub -v` splits its argument on commas, so LANGS=en,de,it,sv arrives as
